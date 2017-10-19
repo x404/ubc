@@ -20,16 +20,24 @@
 	}
 
 	&__pic{
-			margin-left: 12px;
-			margin-right: 12px;	
+		margin-left: 12px;
+		margin-right: 12px;
+		text-align: center;	
 	}
+	&:before,
+	&:after{
 
+	}
+}
+
+.clients,
+.news{
 	&__carousel{
 		margin-top: 6.5rem;
 		&:before,
 		&:after{
 			@extend .before;
-			height: 178px;
+			height: 100%;
 			width: 410px;
 			top: -50px;
 			z-index: 2;
@@ -45,8 +53,137 @@
 		}
 
 		img{
-
 			max-width: 100%;
+		}
+	}
+}
+
+
+.news{
+	$r: 12px;
+	$r2: 10px;
+	padding-bottom: 5.8rem;
+	&__carousel{
+
+		.owl-nav{
+			top: 178px;
+		}
+	}
+
+	&__item{
+	}
+	&__link{
+		display: inline-block;
+		border: 3px solid rgba(255,255,255,0);
+		border-radius: $r;
+		text-decoration: none;
+		@include transition;
+		// text-align: center;
+		&:hover{
+			border-color: $color3;
+			color: $color3;
+			.news{
+				&__datetime{
+					color: $color3;
+					time{
+						&:before{
+							filter: grayscale(0);
+						}
+					}
+				}
+				&__pic{
+					&:after{
+						opacity: 1;
+					}
+					&:before{
+						transform: scale(1);
+						opacity: 1;
+
+					}
+				}
+			}
+		}
+	}
+
+	&__pic{
+		position: relative;
+		img{
+			border-radius: $r2 $r2 0 0;
+			vertical-align: top;
+		}
+		&:before{
+			@extend .before;
+			@include transition;
+			background: $color3;
+			border-radius: 55px;
+			color: $color2;
+			content: "ПОДРОБНЕЙ";
+			height: 55px;
+			left: 50%;
+			$w : 175px;
+			margin-left: -$w/2;
+			margin-top: -26px;
+			padding: 1.8rem 4rem; 
+			text-align: center;
+			top: 0;
+			top: 50%;
+			width: $w;
+			z-index: 999;
+			opacity: 0;
+			transform: scale(1.25);
+		}
+		&:after{
+			@extend .before;
+			@include transition;
+			border-radius: $r2 $r2 0 0;
+			background: rgba(255,255,255, .63);
+			z-index: 99;
+			width: 100%;
+			left: 0;
+			top: 0;
+			height: 100%;
+			opacity: 0;
+		}
+	}
+
+	&__desc{
+		background: $color2;
+		border-radius: 0 0 $r2 $r2;
+		padding:2.7rem 0 3rem;
+		text-align: center;
+		hr{
+			width: 42px;
+			border: none;
+			border-top: 3px solid $color3;
+			background: none;
+		}
+	}
+
+	&__title{
+		@include font-size(1.6);
+		text-transform: uppercase;
+		font-weight: normal;
+		margin-top: 2.5rem;
+		min-height: 7rem;
+	}
+
+	&__datetime{
+		@include font-size(1.2);
+		color: $color8;
+		display: flex;
+		justify-content: center;
+		time{
+			padding-left: 25px;
+			position: relative;
+			&:before{
+				@extend .desaturate;
+				@extend .before;
+				background: url(../images/sprite/calendar.png) no-repeat left top;
+				height: 15px;
+				width: 15px;
+				left: 0;
+				top: 1px;
+			}
 		}
 	}
 }

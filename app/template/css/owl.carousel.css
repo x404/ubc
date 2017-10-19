@@ -50,9 +50,60 @@
   .owl-carousel .owl-nav.disabled,
   .owl-carousel .owl-dots.disabled {
     display: none; }
+
+.owl-carousel .owl-dots{
+	margin-top: 2.8rem;
+	text-align: center;
+}
+
+.owl-carousel .owl-dot.active{
+	background-color: #4db146;
+}
+
+	.owl-carousel .owl-nav{
+		position: absolute;
+		width: 100%;
+	}
+
+  .owl-carousel .owl-nav .owl-dot{
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	border-radius: 16px;
+	border: 3px solid #d6e6d4;
+  }
+
+  .owl-carousel .owl-nav .owl-prev,
+  .owl-carousel .owl-nav .owl-next{
+  	transition: background-color .2s ease-out;
+  	width: 70px;
+  	height: 70px;
+  	border-radius: 50%;
+  	background: url(../images/prevnext.png) rgba(77,177,70, .29) no-repeat; 
+	background-position: 23px center;
+  	position: absolute;
+  	z-index: 9999;
+  }
+	
+	.owl-carousel .owl-nav .owl-prev{
+		background-position: 23px center;
+		left: 83px;
+	}
+
+	.owl-carousel .owl-nav .owl-next{
+		right: 83px;
+		transform: rotate(180deg);
+	}
+
+	.owl-carousel .owl-nav .owl-prev:hover,
+	.owl-carousel .owl-nav .owl-next:hover{
+		background-color: #4db146;
+	}
+
   .owl-carousel .owl-nav .owl-prev,
   .owl-carousel .owl-nav .owl-next,
   .owl-carousel .owl-dot {
+
     cursor: pointer;
     cursor: hand;
     -webkit-user-select: none;
@@ -60,6 +111,9 @@
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none; }
+  .owl-carousel .owl-dot {
+	margin: 0 4px;  	
+  }
   .owl-carousel.owl-loaded {
     display: block; }
   .owl-carousel.owl-loading {

@@ -65,6 +65,35 @@ $(document).ready(function(){
 	});
 
 
+	// news
+	$('#foo4').owlCarousel({
+		loop:false,
+		nav:true,
+		dots: false,
+		items:5,
+		navText: ["", ""],
+		responsive:{
+			0:{
+				items:1,
+				stagePadding: 20
+			},
+			900:{
+				items:2,
+				stagePadding: 0
+			},
+			992:{
+				items:1
+			},
+			1250:{
+				items:2
+			},
+			1550:{
+				items:5
+			}
+		}
+	});
+
+
 	// mobile-menu
 	$('#navbar').each(function(){
 		var $this = $(this),

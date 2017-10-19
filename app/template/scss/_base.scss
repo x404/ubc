@@ -11,8 +11,8 @@ $color4:#5d645d;
 $color5:#d6e6d4;
 $color6:#f5faf5;
 $color7:#389931;
+$color8:#9eaa9c;
 
-$color8:#292929;
 
 
 * {
@@ -56,6 +56,9 @@ html, body{
 }
 
 
+.desaturate {
+	filter: grayscale(100%);
+}
 
 *:focus{outline:none}
 
@@ -282,10 +285,20 @@ section{
 /* =footer
 ---------------------------*/
 footer{
-	height: 40px;
-	background: #FFCC00;
+	border-bottom: 3px solid $color3;
 }
+.footer{
+	&__left{
 
+	}
+	&__right{
+		text-align: right;
+		flex-grow: 1;
+		padding: 4.5rem 0;
+	}
+}
+/* =/footer
+---------------------------*/
 
 
 .justifyleft {text-align:left !important; }
