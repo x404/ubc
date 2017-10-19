@@ -1,5 +1,52 @@
-.about{
-	header{
-		margin: 6.5rem 0 4.8rem; 
+.clients{
+	@include font-size(1.4);
+	.addmsg{
+		@include font-size(1.4);
+		@include transition-param(background-color);
+		background-color: $color3;
+		border: none;
+		color: $color2;
+		display: block;
+		$h: 5.8rem;
+		height: $h;
+		border-radius: $h;
+		cursor: pointer;
+		margin: 4.5rem auto 0;
+		padding: 0 4rem;
+		text-transform: uppercase;
+		&:hover{
+			background-color: $color7;
+		}
+	}
+
+	&__pic{
+			margin-left: 12px;
+			margin-right: 12px;	
+	}
+
+	&__carousel{
+		margin-top: 6.5rem;
+		&:before,
+		&:after{
+			@extend .before;
+			height: 178px;
+			width: 410px;
+			top: -50px;
+			z-index: 2;
+		}
+		&:before{
+			left: 0;
+			@include gradient-horizontal(rgba(255,255,255,.95), rgba(255,255,255,0));
+		}
+
+		&:after{
+			right: 0;
+			@include gradient-horizontal(rgba(255,255,255,0), rgba(255,255,255,.95));
+		}
+
+		img{
+
+			max-width: 100%;
+		}
 	}
 }

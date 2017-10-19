@@ -9,9 +9,9 @@ $color2:#fff;
 $color3:#4db146;
 $color4:#5d645d;
 $color5:#d6e6d4;
+$color6:#f5faf5;
+$color7:#389931;
 
-$color6:#ff5722;
-$color7:#80bbde;
 $color8:#292929;
 
 
@@ -104,9 +104,10 @@ h3{font-size:1.6rem}
 
 header{
 	text-align: center;
-	h1{
+	.title{
 		display: inline-block;
 		position: relative;
+		margin: 6.5rem 0 4.8rem; 
 		&:after{
 			@extend .before;
 			border-top: 1px solid $color5;
@@ -116,6 +117,10 @@ header{
 			bottom: -15px;
 		}
 	}
+}
+
+.bgcolor{
+	background-color: $color6;
 }
 
 *:focus{outline:none}
@@ -179,6 +184,10 @@ input::-moz-focus-inner{
 	}
 }
 
+
+section{
+	padding-bottom: 6.5rem;
+}
 
 
 /* =header
