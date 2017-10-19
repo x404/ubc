@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600');
+
 /*** reset ***********/
 html,body,ul,ol,li,dl,dt,p,h1,h2,h3,h4,h5,h6,form,fieldset,a,img,label{margin:0;padding:0;border:0}
 header, section, footer, aside, nav, article {display:block}
@@ -5,9 +7,9 @@ ul{list-style:none}
 $color1:#000;
 $color2:#fff;
 $color3:#4db146;
+$color4:#5d645d;
+$color5:#d6e6d4;
 
-$color4:#1a237e;
-$color5:#666;
 $color6:#ff5722;
 $color7:#80bbde;
 $color8:#292929;
@@ -34,16 +36,14 @@ html {
 
 
 body{
-	border-top: 3px solid $color3;
+	font-family: 'Open Sans', sans-serif;
 	@include flexbox;
+	@include font-size(1.6);
+	border-top: 3px solid $color3;
+	color: $color4;
 	flex-flow: column;
 	font-display: swap;
 	height: 100vh;
-	// font-size:10px;
-	// font-size: 1.4rem;
-
-	@include font-size(1.4);
-	@include rounded;
 }
 
 html, body{
@@ -64,6 +64,23 @@ input::-moz-focus-inner{
 	padding: 0;
 }
 
+.flexbox{
+	@include flexbox;
+}
+
+.space-between{
+	justify-content: space-between;
+}
+
+.space-around{
+	justify-content: space-around;
+}
+
+.flex-start{
+	justify-content: flex-start;
+}
+
+
 
 .outerwrapper{
 	-webkit-flex: 1;
@@ -71,12 +88,35 @@ input::-moz-focus-inner{
 }
 
 /*** standart classes *****/
-p{line-height:16px}
-a{color:#020000}
-h1{font-size:2.5rem}
+p{line-height: 1.6;}
+a{
+	color: $color4;
+	text-decoration-skip: ink;
+}
+h1{
+	@include font-size(3.6);
+	text-transform: uppercase;
+	border-left: 3px solid $color3;
+	padding-left: 2rem;
+}
 h2{font-size:2.4rem}
 h3{font-size:1.6rem}
 
+header{
+	text-align: center;
+	h1{
+		display: inline-block;
+		position: relative;
+		&:after{
+			@extend .before;
+			border-top: 1px solid $color5;
+			left: 50%;
+			margin-left: -32px;
+			width: 65px;
+			bottom: -15px;
+		}
+	}
+}
 
 *:focus{outline:none}
 
@@ -143,7 +183,43 @@ input::-moz-focus-inner{
 
 /* =header
 ---------------------------*/
-header{
+.header{
+	padding: 2.6rem 0;
+	&__logo{
+
+	}
+	&__nav{
+		flex-grow: 1;
+	}
+
+	.flexbox{
+		align-items: center;
+	}
+}
+
+.mainnav{
+	margin-left: 9rem;
+	ul{
+		display: flex;
+
+		li{
+			margin-left: 8.2rem;
+			&:first-child{
+				margin-left: 0;
+			}
+			a{
+				border-bottom: 2px solid rgba(0,0,0,0);
+				text-decoration: none;
+				text-transform: uppercase;
+				@include transition;
+				&:hover{
+					$color: $color3;
+					border-bottom: 2px solid $color;
+					color: $color;
+				}
+			}
+		}
+	}
 }
 
 /* =/header
@@ -200,3 +276,14 @@ footer{
 	height: 40px;
 	background: #FFCC00;
 }
+
+
+
+.justifyleft {text-align:left !important; }
+.justifyright {text-align:right !important; }
+.justifycenter {text-align: center !important; }
+.justifyfull {text-align:justify !important; }
+ 
+img.justifyleft, table.justifyleft {float:left; margin-right:10px;margin-bottom:5px;}
+img.justifyright, table.justifyright {float:right; margin-left:10px;margin-bottom:5px;}
+img.justifycenter, table.justifycenter { display: block; margin-left: auto; margin-right: auto;}
