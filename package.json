@@ -1,5 +1,5 @@
 {
-  "name": "cryocream",
+  "name": "ubc",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/x404/cryocream"
+    "url": "https://github.com/x404/ubc"
   },
   "author": "x404",
   "license": "ISC",

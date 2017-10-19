@@ -4,8 +4,8 @@ header, section, footer, aside, nav, article {display:block}
 ul{list-style:none}
 $color1:#000;
 $color2:#fff;
+$color3:#4db146;
 
-$color3:#f4f4f4;
 $color4:#1a237e;
 $color5:#666;
 $color6:#ff5722;
@@ -34,6 +34,7 @@ html {
 
 
 body{
+	border-top: 3px solid $color3;
 	@include flexbox;
 	flex-flow: column;
 	font-display: swap;
