@@ -162,12 +162,6 @@ input::-moz-focus-inner{
 }
 
 
-@mixin sprite($x:0, $y:0){
-	background-image: url(../images/sprite.png);
-	background-repeat: no-repeat;
-	background-position: $x $y;
-}
-
 .before{
 	content: "";
 	display: block;
@@ -245,40 +239,55 @@ section{
 ---------------------------*/
 
 
-.owl-carousel{
-	.owl-controls{
-		position: absolute;
-		width: 100%;
-		top: 115px;
-		.owl-buttons{
-			.owl-prev,
-			.owl-next{
-				background: url(../images/prevnext.png) no-repeat left top;
-				width: 65px;
-				height: 65px;
-				position: absolute;
-			}
-			.owl-prev{
-				left: -110px;
-			}
-			.owl-next{
-				@include sprite;
-				// .rotation(180deg);
-				right: -110px;
+
+/* =contacts
+---------------------------*/
+.contacts{
+	color: $color4;
+	a{
+		text-decoration: none;
+	}
+	&__adr,
+	&__tel,
+	&__mail
+	{
+		position: relative;
+		&:before{
+			@extend .before;
+			left: -50px;
+		}
+	}
+
+	&__adr{
+		&:before{
+			@include sprite($icon-pin);
+			top: -2px;
+		}
+	}
+
+	&__tel{
+		&:before{
+			@include sprite($icon-phone);
+			top: -2px;
+		}
+		span{
+			margin-right: 2.5rem;
+			&:last-child{
+				margin-right: 0;
 			}
 		}
 	}
-}
 
-/* =main
----------------------------*/
-
-.main{
-	aside{
+	&__mail{
+		&:before{
+			@include sprite($icon-email);
+			top: -5px;
+		}
 	}
+
 }
-
-
+/* =/contacts
+---------------------------*/
 
 
 
@@ -286,6 +295,7 @@ section{
 ---------------------------*/
 footer{
 	border-bottom: 3px solid $color3;
+	padding: 4.5rem 0;
 }
 .footer{
 	&__left{
@@ -294,7 +304,6 @@ footer{
 	&__right{
 		text-align: right;
 		flex-grow: 1;
-		padding: 4.5rem 0;
 	}
 }
 /* =/footer

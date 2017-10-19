@@ -19,7 +19,7 @@
 
 @media (min-width: 1199px) {
   .container {
-    width: 1100px; } }
+    width: 1140px; } }
 
 @media (min-width: 1400px) {
   .container {
@@ -183,7 +183,7 @@ input::-moz-focus-inner {
   .tdu:hover {
     text-decoration: none; }
 
-.before, header .title:after, .clients__carousel:before, .clients__carousel:after,
+.before, header .title:after, .contacts__adr:before, .contacts__tel:before, .contacts__mail:before, .clients__carousel:before, .clients__carousel:after,
 .news__carousel:before,
 .news__carousel:after, .news__pic:before, .news__pic:after, .news__datetime time:before {
   content: "";
@@ -235,35 +235,50 @@ section {
 ---------------------------*/
 /* =/navigation
 ---------------------------*/
-.owl-carousel .owl-controls {
-  position: absolute;
-  width: 100%;
-  top: 115px; }
-  .owl-carousel .owl-controls .owl-buttons .owl-prev,
-  .owl-carousel .owl-controls .owl-buttons .owl-next {
-    background: url(../images/prevnext.png) no-repeat left top;
-    width: 65px;
-    height: 65px;
-    position: absolute; }
-  .owl-carousel .owl-controls .owl-buttons .owl-prev {
-    left: -110px; }
-  .owl-carousel .owl-controls .owl-buttons .owl-next {
+/* =contacts
+---------------------------*/
+.contacts {
+  color: #5d645d; }
+  .contacts a {
+    text-decoration: none; }
+  .contacts__adr, .contacts__tel, .contacts__mail {
+    position: relative; }
+    .contacts__adr:before, .contacts__tel:before, .contacts__mail:before {
+      left: -50px; }
+  .contacts__adr:before {
     background-image: url(../images/sprite.png);
-    background-repeat: no-repeat;
-    background-position: 0 0;
-    right: -110px; }
+    background-position: 0px -31px;
+    width: 27px;
+    height: 33px;
+    top: -2px; }
+  .contacts__tel:before {
+    background-image: url(../images/sprite.png);
+    background-position: -38px 0px;
+    width: 31px;
+    height: 30px;
+    top: -2px; }
+  .contacts__tel span {
+    margin-right: 2.5rem; }
+    .contacts__tel span:last-child {
+      margin-right: 0; }
+  .contacts__mail:before {
+    background-image: url(../images/sprite.png);
+    background-position: 0px 0px;
+    width: 38px;
+    height: 31px;
+    top: -5px; }
 
-/* =main
+/* =/contacts
 ---------------------------*/
 /* =footer
 ---------------------------*/
 footer {
-  border-bottom: 3px solid #4db146; }
+  border-bottom: 3px solid #4db146;
+  padding: 4.5rem 0; }
 
 .footer__right {
   text-align: right;
-  flex-grow: 1;
-  padding: 4.5rem 0; }
+  flex-grow: 1; }
 
 /* =/footer
 ---------------------------*/
@@ -318,36 +333,41 @@ img.justifycenter, table.justifycenter {
     margin-left: 12px;
     margin-right: 12px;
     text-align: center; }
+  .clients .text {
+    padding-left: 10rem;
+    padding-right: 10rem; }
+  .clients__carousel {
+    margin-top: 6.5rem; }
 
-.clients__carousel,
-.news__carousel {
-  margin-top: 6.5rem; }
-  .clients__carousel:before, .clients__carousel:after,
-  .news__carousel:before,
-  .news__carousel:after {
-    height: 100%;
-    width: 410px;
-    top: -50px;
-    z-index: 2; }
-  .clients__carousel:before,
-  .news__carousel:before {
-    left: 0;
-    background-image: -webkit-linear-gradient(left, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0) 100%);
-    background-image: -o-linear-gradient(left, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0) 100%);
-    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0) 100%);
-    background-repeat: repeat-x;
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#F2FFFFFF', endColorstr='#00FFFFFF', GradientType=1); }
-  .clients__carousel:after,
-  .news__carousel:after {
-    right: 0;
-    background-image: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.95) 100%);
-    background-image: -o-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.95) 100%);
-    background-image: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.95) 100%);
-    background-repeat: repeat-x;
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00FFFFFF', endColorstr='#F2FFFFFF', GradientType=1); }
-  .clients__carousel img,
-  .news__carousel img {
-    max-width: 100%; }
+.clients__carousel:before, .clients__carousel:after,
+.news__carousel:before,
+.news__carousel:after {
+  height: 100%;
+  width: 410px;
+  top: -50px;
+  z-index: 2; }
+
+.clients__carousel:before,
+.news__carousel:before {
+  left: 0;
+  background-image: -webkit-linear-gradient(left, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0) 100%);
+  background-image: -o-linear-gradient(left, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0) 100%);
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0) 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#F2FFFFFF', endColorstr='#00FFFFFF', GradientType=1); }
+
+.clients__carousel:after,
+.news__carousel:after {
+  right: 0;
+  background-image: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.95) 100%);
+  background-image: -o-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.95) 100%);
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.95) 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00FFFFFF', endColorstr='#F2FFFFFF', GradientType=1); }
+
+.clients__carousel img,
+.news__carousel img {
+  max-width: 100%; }
 
 .news {
   padding-bottom: 5.8rem; }
@@ -434,11 +454,16 @@ img.justifycenter, table.justifycenter {
       padding-left: 25px;
       position: relative; }
       .news__datetime time:before {
-        background: url(../images/sprite/calendar.png) no-repeat left top;
-        height: 15px;
+        background-image: url(../images/sprite.png);
+        background-position: -27px -31px;
         width: 15px;
+        height: 15px;
         left: 0;
         top: 1px; }
+
+#map {
+  height: 600px;
+  width: 100%; }
 
 /* =mobile-menu
 ---------------------------*/

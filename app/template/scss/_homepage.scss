@@ -24,16 +24,19 @@
 		margin-right: 12px;
 		text-align: center;	
 	}
-	&:before,
-	&:after{
+	.text{
+		padding-left: 10rem;
+		padding-right: 10rem;
+	}
 
+	&__carousel{
+		margin-top: 6.5rem;
 	}
 }
 
 .clients,
 .news{
 	&__carousel{
-		margin-top: 6.5rem;
 		&:before,
 		&:after{
 			@extend .before;
@@ -178,12 +181,16 @@
 			&:before{
 				@extend .desaturate;
 				@extend .before;
-				background: url(../images/sprite/calendar.png) no-repeat left top;
-				height: 15px;
-				width: 15px;
+				@include sprite($icon-calendar);
 				left: 0;
 				top: 1px;
 			}
 		}
 	}
+}
+
+
+#map{
+	height: 600px;
+	width: 100%;
 }

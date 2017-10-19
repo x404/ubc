@@ -145,3 +145,32 @@ addLoadEvent(function(){
 	})
 });
 // =/заглушка для IE
+
+
+
+
+// google map
+var map;
+function initMap() {
+var myLatlng = new google.maps.LatLng(48.4229925,35.028076);
+var mapOptions = {
+	zoom: 17,
+	center: myLatlng,
+	mapTypeId: google.maps.MapTypeId.ROADMAP,
+	scrollwheel : false
+};
+var styles = [{
+	stylers: [
+		{saturation: 0}
+		]
+	}];
+	var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+	map.setOptions({styles: styles});
+
+	var image = '/template/images/balloon.png';
+	var primna = new google.maps.Marker({
+		position: {lat: 48.4229925, lng: 35.028076},
+		map: map,
+		icon: image
+	});
+}

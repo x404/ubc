@@ -65,7 +65,7 @@
 		width: 100%;
 	}
 
-  .owl-carousel .owl-nav .owl-dot{
+  .owl-carousel .owl-dots .owl-dot{
 	display: inline-block;
 	width: 16px;
 	height: 16px;
@@ -103,7 +103,6 @@
   .owl-carousel .owl-nav .owl-prev,
   .owl-carousel .owl-nav .owl-next,
   .owl-carousel .owl-dot {
-
     cursor: pointer;
     cursor: hand;
     -webkit-user-select: none;
