@@ -1,0 +1,134 @@
+// SCSS variables are information about icon's compiled state, stored under its original file name
+//
+// .icon-home {
+//   width: $icon-home-width;
+// }
+//
+// The large array-like variables contain all information about a single icon
+// $icon-home: x y offset_x offset_y width height total_width total_height image_path;
+//
+// At the bottom of this section, we provide information about the spritesheet itself
+// $spritesheet: width height image $spritesheet-sprites;
+$icon-bl-name: 'icon-bl';
+$icon-bl-x: 0px;
+$icon-bl-y: 0px;
+$icon-bl-offset-x: 0px;
+$icon-bl-offset-y: 0px;
+$icon-bl-width: 106px;
+$icon-bl-height: 75px;
+$icon-bl-total-width: 318px;
+$icon-bl-total-height: 150px;
+$icon-bl-image: '../images/spriteplus.png';
+$icon-bl: (0px, 0px, 0px, 0px, 106px, 75px, 318px, 150px, '../images/spriteplus.png', 'icon-bl', );
+$icon-br-name: 'icon-br';
+$icon-br-x: 106px;
+$icon-br-y: 0px;
+$icon-br-offset-x: -106px;
+$icon-br-offset-y: 0px;
+$icon-br-width: 106px;
+$icon-br-height: 75px;
+$icon-br-total-width: 318px;
+$icon-br-total-height: 150px;
+$icon-br-image: '../images/spriteplus.png';
+$icon-br: (106px, 0px, -106px, 0px, 106px, 75px, 318px, 150px, '../images/spriteplus.png', 'icon-br', );
+$icon-tl-name: 'icon-tl';
+$icon-tl-x: 0px;
+$icon-tl-y: 75px;
+$icon-tl-offset-x: 0px;
+$icon-tl-offset-y: -75px;
+$icon-tl-width: 106px;
+$icon-tl-height: 75px;
+$icon-tl-total-width: 318px;
+$icon-tl-total-height: 150px;
+$icon-tl-image: '../images/spriteplus.png';
+$icon-tl: (0px, 75px, 0px, -75px, 106px, 75px, 318px, 150px, '../images/spriteplus.png', 'icon-tl', );
+$icon-tlh-name: 'icon-tlh';
+$icon-tlh-x: 106px;
+$icon-tlh-y: 75px;
+$icon-tlh-offset-x: -106px;
+$icon-tlh-offset-y: -75px;
+$icon-tlh-width: 106px;
+$icon-tlh-height: 75px;
+$icon-tlh-total-width: 318px;
+$icon-tlh-total-height: 150px;
+$icon-tlh-image: '../images/spriteplus.png';
+$icon-tlh: (106px, 75px, -106px, -75px, 106px, 75px, 318px, 150px, '../images/spriteplus.png', 'icon-tlh', );
+$icon-tr-name: 'icon-tr';
+$icon-tr-x: 212px;
+$icon-tr-y: 0px;
+$icon-tr-offset-x: -212px;
+$icon-tr-offset-y: 0px;
+$icon-tr-width: 106px;
+$icon-tr-height: 75px;
+$icon-tr-total-width: 318px;
+$icon-tr-total-height: 150px;
+$icon-tr-image: '../images/spriteplus.png';
+$icon-tr: (212px, 0px, -212px, 0px, 106px, 75px, 318px, 150px, '../images/spriteplus.png', 'icon-tr', );
+$spritesheet-width: 318px;
+$spritesheet-height: 150px;
+$spritesheet-image: '../images/spriteplus.png';
+$spritesheet-sprites: ($icon-bl, $icon-br, $icon-tl, $icon-tlh, $icon-tr, );
+$spritesheet: (318px, 150px, '../images/spriteplus.png', $spritesheet-sprites, );
+
+// The provided mixins are intended to be used with the array-like variables
+//
+// .icon-home {
+//   @include sprite-width($icon-home);
+// }
+//
+// .icon-email {
+//   @include sprite($icon-email);
+// }
+//
+// Example usage in HTML:
+//
+// `display: block` sprite:
+// <div class="icon-home"></div>
+//
+// To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+//
+// // CSS
+// .icon {
+//   display: inline-block;
+// }
+//
+// // HTML
+// <i class="icon icon-home"></i>
+@mixin sprite-width($sprite) {
+  width: nth($sprite, 5);
+}
+
+@mixin sprite-height($sprite) {
+  height: nth($sprite, 6);
+}
+
+@mixin sprite-position($sprite) {
+  $sprite-offset-x: nth($sprite, 3);
+  $sprite-offset-y: nth($sprite, 4);
+  background-position: $sprite-offset-x  $sprite-offset-y;
+}
+
+@mixin sprite-image($sprite) {
+  $sprite-image: nth($sprite, 9);
+  background-image: url(#{$sprite-image});
+}
+
+@mixin sprite($sprite) {
+  @include sprite-image($sprite);
+  @include sprite-position($sprite);
+  @include sprite-width($sprite);
+  @include sprite-height($sprite);
+}
+
+// The `sprites` mixin generates identical output to the CSS template
+//   but can be overridden inside of SCSS
+//
+// @include sprites($spritesheet-sprites);
+@mixin sprites($sprites) {
+  @each $sprite in $sprites {
+    $sprite-name: nth($sprite, 10);
+    .#{$sprite-name} {
+      @include sprite($sprite);
+    }
+  }
+}

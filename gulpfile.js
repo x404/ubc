@@ -113,6 +113,28 @@ gulp.task('sprite-create', ['sprite-clean'], function () {
     return spriteData;
 });
 
+gulp.task('spriteplus-create', ['sprite-clean'], function () {
+    // var fileName = 'sprite-' + Math.random().toString().replace(/[^0-9]/g, '') + '.png';
+    var fileName = 'spriteplus.png'
+
+    var spriteData = gulp.src([config.sourceDir + '/images/spriteplus/*.png', '!' + config.sourceDir + '/images/spriteplus/buttons.png'])
+        .pipe(spritesmith({
+            imgName: fileName,
+            cssName: '_spriteplus.scss',
+            cssVarMap: function (sprite) {
+                sprite.name = 'icon-' + sprite.name;
+            },
+             imgPath: '../images/' + fileName
+        }));
+
+    spriteData.img.pipe(gulp.dest(config.destDir + '/images/'));
+
+    spriteData.css.pipe(gulp.dest(config.sourceDir + '/scss/'));
+
+    return spriteData;
+});
+
+
 
 gulp.task('img', function() {
     return gulp.src('app/template/images/**/*') // Берем все изображения из app

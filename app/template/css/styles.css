@@ -99,7 +99,7 @@ body {
 html, body {
   height: 100%; }
 
-.ptsans, .production__item-text {
+.ptsans, .structure__box > div:not(.structure__center), .production__item-text {
   font-family: 'PT Sans', sans-serif; }
 
 .desaturate, .news__datetime time:before {
@@ -186,7 +186,7 @@ input::-moz-focus-inner {
   .tdu:hover {
     text-decoration: none; }
 
-.before, header .title:after, .contacts__adr:before, .contacts__tel:before, .contacts__mail:before, .production div.owl-nav .owl-prev:before,
+.before, header .title:after, .contacts__adr:before, .contacts__tel:before, .contacts__mail:before, .structure__box > div:not(.structure__center):before, .structure__box > div:not(.structure__center):after, .production div.owl-nav .owl-prev:before,
 .production div.owl-nav .owl-next:before, .clients__carousel:before, .clients__carousel:after,
 .news__carousel:before,
 .news__carousel:after, .news__pic:before, .news__pic:after, .news__datetime time:before {
@@ -315,19 +315,105 @@ img.justifycenter, table.justifycenter {
 
 /* =structure
 ---------------------------*/
+.structure__box {
+  min-height: 470px;
+  width: 890px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative; }
+  .structure__box-hover .structure__center {
+    border-color: #4db146 !important; }
+  .structure__box > div:not(.structure__center) {
+    position: absolute;
+    width: 290px;
+    height: 200px; }
+    .structure__box > div:not(.structure__center) a {
+      font-size: 14px;
+      font-size: 1.4rem;
+      text-decoration: none;
+      display: block;
+      position: relative;
+      z-index: 999;
+      height: 100%; }
+      .structure__box > div:not(.structure__center) a img, .structure__box > div:not(.structure__center) a p {
+        -webkit-transition: all 0.2s ease-out;
+        transition: all 0.2s ease-out; }
+    .structure__box > div:not(.structure__center):before, .structure__box > div:not(.structure__center):after {
+      background: url(../images/plus.png) no-repeat;
+      height: 75px;
+      width: 106px; }
+    .structure__box > div:not(.structure__center):after {
+      -webkit-transition: opacity 0.2s ease-out;
+      transition: opacity 0.2s ease-out;
+      opacity: 0;
+      background-position: left -75px; }
+    .structure__box > div:not(.structure__center):hover:after {
+      opacity: 1; }
+    .structure__box > div:not(.structure__center):hover img, .structure__box > div:not(.structure__center):hover p {
+      transform: scale(1.2); }
+    .structure__box > div:not(.structure__center):hover p {
+      padding-top: 1rem; }
+
 .structure__center {
   font-size: 29px;
   font-size: 2.9rem;
+  -webkit-transition: border-color 0.2s ease-out;
+  transition: border-color 0.2s ease-out;
+  align-items: center;
   background-color: #f5faf5;
   border-radius: 50%;
+  border: 3px solid #fff;
   color: #4db146;
+  display: flex;
   font-weight: bold;
   height: 258px;
+  justify-content: center;
+  margin: 155px auto;
   text-align: center;
-  width: 258px;
-  display: flex;
-  align-items: center;
-  justify-content: center; }
+  width: 258px; }
+  .structure__center:hover {
+    border-color: #4db146; }
+
+.structure__tl {
+  left: 20px;
+  top: -96px; }
+  .structure__tl a {
+    width: 247px;
+    padding-right: 100px; }
+  .structure__tl:before, .structure__tl:after {
+    right: 19px;
+    bottom: 71px; }
+  .structure__tl p {
+    padding-top: 6px;
+    text-align: right; }
+
+.structure__tr {
+  padding-left: 125px;
+  right: 6px;
+  text-align: left;
+  top: -163px;
+  width: 180px; }
+  .structure__tr a {
+    width: 185px; }
+  .structure__tr p {
+    padding-top: 9px; }
+  .structure__tr:before, .structure__tr:after {
+    left: 0;
+    bottom: 0; }
+
+.structure__bl {
+  left: 20px;
+  top: 370px; }
+  .structure__bl p {
+    text-align: right; }
+  .structure__bl a {
+    width: 160px; }
+
+.structure__br {
+  top: 370px;
+  padding-left: 125px;
+  right: 0px;
+  text-align: left; }
 
 /* =/structure
 ---------------------------*/

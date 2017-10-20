@@ -2,22 +2,142 @@
 ---------------------------*/
 .structure{
 	&__box{
-		
+		min-height: 470px;
+		width: 890px;
+		margin-left: auto;
+		margin-right: auto;
+		position: relative;
+		&-hover{
+			.structure__center{
+				border-color: $color3 !important;
+			}
+		}
+
+		& > div:not(.structure__center){
+			@extend .ptsans;
+			position: absolute;
+			width: 290px;
+			height: 200px;
+			a{
+				@include font-size(1.4);
+				text-decoration: none;
+				display: block;
+				position: relative;
+				z-index: 999;
+				height: 100%;
+				img,p{
+					@include transition;
+				}
+			}
+			&:before,
+			&:after{
+				@extend .before;
+				background: url(../images/plus.png) no-repeat;
+				height: 75px;
+				width: 106px;
+			}
+
+			&:after{
+				@include transition-param;
+				opacity: 0;
+				background-position: left -75px;
+			}
+
+			&:hover{
+				&:after{
+					opacity: 1;
+				}
+				img,p{
+					transform: scale(1.2)
+				}
+				p{
+					padding-top: 1rem;
+				}
+			}
+		}
 	}
 	&__center{
 		$s: 258px;
 		@include font-size(2.9);
+		@include transition-param(border-color);
+		align-items: center;
 		background-color: $color6;
 		border-radius: 50%;
+		border: 3px solid $color2;
 		color: $color3;
+		display: flex;
 		font-weight: bold;
 		height: $s;
+		justify-content: center;
+		margin: 155px auto;
 		text-align: center;
 		width: $s;
-		display: flex;
-		align-items: center;
-		justify-content: center;
+		&:hover{
+			border-color: $color3;
+		}
 	}
+
+	$x1: 20px;
+	$y1: -96px;
+	$x2: 0px;
+	$y2: 370px;
+
+	$w: 106px;
+
+
+	&__tl{
+		left: $x1;
+		top: $y1;
+		a{
+			width: 247px;
+			padding-right: 100px;
+		}
+		&:before,
+		&:after{
+			right: 19px;
+			bottom: 71px;
+		}
+		p{
+			padding-top: 6px;
+			text-align: right;	
+		}
+	}
+	&__tr{
+		padding-left: 125px;
+		right: 6px;
+		text-align: left;
+		top: -163px;
+		width: 180px;
+		a{
+			width: 185px;	
+		}
+		p{
+			padding-top: 9px;
+		}
+
+		&:before,
+		&:after{
+			left: 0;
+			bottom: 0;
+		}
+	}
+	&__bl{
+		left: $x1;
+		top: $y2;
+		p{
+			text-align: right;			
+		}
+		a{
+			width: 160px;
+		}
+	}
+	&__br{
+		top: $y2;
+		padding-left: 125px;
+		right: $x2;
+		text-align: left;
+	}
+
 }
 /* =/structure
 ---------------------------*/
