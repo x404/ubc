@@ -1,3 +1,149 @@
+/* =structure
+---------------------------*/
+.structure{
+	&__box{
+		
+	}
+	&__center{
+		$s: 258px;
+		@include font-size(2.9);
+		background-color: $color6;
+		border-radius: 50%;
+		color: $color3;
+		font-weight: bold;
+		height: $s;
+		text-align: center;
+		width: $s;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+}
+/* =/structure
+---------------------------*/
+
+
+/* =production
+---------------------------*/
+.production{
+	&__carousel{
+		margin-top: 10rem;
+	}
+	div.owl{
+		&-nav,
+		&-dots{
+			position: absolute;
+			top: -120px;
+		}
+		&-nav{
+			$w: 1260px;
+			width: $w;
+			left: 50%;
+			margin-left: -$w/2;
+			.owl-prev,
+			.owl-next{
+				transition: background .2s ease-out, border-color .2s ease-out;
+				background: $color2;
+				border: 9px solid $color2;
+				&:before{
+					@extend .before;
+					@include sprite($icon-arrow-l-color);
+					left: 9px;
+					top: 16px;
+				}
+				&:hover{
+					border-color: #d6e6d4;
+					&:before{
+						@include sprite($icon-arrow-l-white);						
+					}
+				}
+			}
+
+			.owl-prev{
+				&:before{
+					@include sprite($icon-arrow-l-color);
+				}
+			}
+		}
+
+		&-dots{
+			width: 100%;
+			text-align: center;
+		}
+	}
+	&__item{
+		&-default{
+			display: flex;
+		}
+		&-overlay{
+			position: absolute;
+			left: 0;
+			top: 0;
+			opacity: 0;
+			z-index: -1;
+			@include transition-param;				
+		}
+
+		&:hover{
+			.production{
+				&__item{
+					&-default{
+					}
+					&-overlay{
+						opacity: 1;
+						z-index: 1;
+					}
+				}
+			}
+		}
+		&-left{
+			img{
+				vertical-align: top;
+			}
+		}
+		&-right{
+			padding-left: 3rem;
+			width: 845px;
+			text-align: justify;
+		}
+
+		&-top{
+			display: flex;
+			justify-content: space-between;
+			padding: 3.5rem 0;
+		}
+		&-text{
+			@include font-size(1.4);
+			@extend .ptsans;
+			max-height: 245px;
+			overflow: hidden;
+			text-overflow: ellipsis
+		}
+		&-link{
+			align-items: center;
+			background-color: $color2;
+			border-radius: 2.9rem;
+			color: $color3;
+			display: flex;
+			height: 5.8rem;
+			padding: 0 2.5rem;
+			position: relative;
+			text-decoration: none;
+			transition: background-color .2s ease-out, color .2s ease-out;
+			z-index: 9999;
+			&:hover{
+				background-color: $color3;
+				color: $color2;
+			}
+		}
+	}
+}
+/* =production
+---------------------------*/
+
+
+/* =clients
+---------------------------*/
 .clients{
 	@include font-size(1.4);
 	.addmsg{
@@ -60,8 +206,12 @@
 		}
 	}
 }
+/* =/clients
+---------------------------*/
 
 
+/* =news
+---------------------------*/
 .news{
 	$r: 12px;
 	$r2: 10px;
@@ -188,6 +338,8 @@
 		}
 	}
 }
+/* =/news
+---------------------------*/
 
 
 #map{

@@ -37,6 +37,16 @@ $(document).ready(function(){
 	});
 
 
+	// production
+	$('#foo2').owlCarousel({
+		loop:false,
+		nav:true,
+		dots: true,
+		items:1,
+		navText: ["", ""]
+	});
+
+
 	$('#foo3').owlCarousel({
 		loop:false,
 		nav:false,
@@ -154,7 +164,7 @@ var map;
 function initMap() {
 var myLatlng = new google.maps.LatLng(48.4229925,35.028076);
 var mapOptions = {
-	zoom: 17,
+	zoom: 17 ,
 	center: myLatlng,
 	mapTypeId: google.maps.MapTypeId.ROADMAP,
 	scrollwheel : false
