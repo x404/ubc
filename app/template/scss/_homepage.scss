@@ -266,6 +266,7 @@
 ---------------------------*/
 .clients{
 	@include font-size(1.4);
+	position: relative;
 	.addmsg{
 		@include font-size(1.4);
 		@include transition-param(background-color);
@@ -465,4 +466,117 @@
 #map{
 	height: 600px;
 	width: 100%;
+}
+
+
+
+	.modal-email{
+		@include rounded(1rem);
+		background-color: $color6;
+		border: 3px solid $color3;
+		bottom: 16.5rem;
+		display: none;
+		left: 50%;
+		margin-left: -270px;
+		padding: 5.6rem 2rem 3.3rem;
+		position: absolute;
+		width: 535px;
+		z-index: 9999;
+		&:after{
+			@extend .before;
+			width: 27px;
+			height: 15px;
+			background: url(../images/form-arrow.png) no-repeat center center;
+			bottom: -15px;
+			left: 50%;
+			margin-left: -14px;
+		}
+		form{
+			padding-top: .5rem;
+		}
+
+		.modal-title{
+			@include font-size(2.4);
+			color: $color3;
+			font-weight: normal;
+			text-align: center;
+		}
+		.form-control{
+			@include font-size(1.4);
+			@include rounded(.5rem);
+			@extend .ptsans;
+			border: 3px solid $color2;
+			color: $color1;
+			height: 5rem;
+			margin-top: 2.4rem;
+			padding-left: 1.6rem;
+			padding-right: 1.6rem;
+			transition: border-color .2s;
+			width: 100%;
+			&:focus,
+			&:active{
+				border-color: $color3;
+			}
+		}
+		textarea.form-control{
+			height: 17rem;
+			padding-top: 1rem;
+			resize: none;
+		}
+
+		.btn{
+			margin-top: 3rem;
+			width: 24rem;
+		}
+	}
+
+	.thank{
+		text-align: center;
+		padding: 2rem 0 4rem;
+	}
+
+button.close{
+	@include sprite($icon-close-modal);
+	border: none;
+	background-color: transparent;
+	position: absolute;
+	right: 27px;
+	top: 19px;
+	cursor: pointer;
+	&:hover{
+		@include sprite($icon-close-modal-hover);
+	}
+}
+
+
+.submit-btn{
+}
+
+.backdrop{
+    position: fixed;
+    left: 0;
+    top: 0;
+    background: rgba(44,59,43,.3);
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+}
+
+.btn{
+	$h: 57px;
+	height: $h;
+	border-radius: $h;
+	@include font-size(1.8);
+	background-color: $color3;
+	border: none;
+	color: $color2;
+	cursor: pointer;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: normal;
+	padding: 1.6rem 3.5rem;
+	text-transform: uppercase;
+	transition: opacity .2s;
+	&:hover{
+		opacity: .9;
+	}
 }

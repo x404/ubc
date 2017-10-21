@@ -99,7 +99,7 @@ body {
 html, body {
   height: 100%; }
 
-.ptsans, .structure__box > div:not(.structure__center), .production__item-text {
+.ptsans, .structure__box > div:not(.structure__center), .production__item-text, .modal-email .form-control {
   font-family: 'PT Sans', sans-serif; }
 
 .desaturate, .news__datetime time:before {
@@ -189,7 +189,7 @@ input::-moz-focus-inner {
 .before, header .title:after, .contacts__adr:before, .contacts__tel:before, .contacts__mail:before, .structure__box > div:not(.structure__center):before, .structure__box > div:not(.structure__center):after, .production div.owl-nav .owl-prev:before,
 .production div.owl-nav .owl-next:before, .clients__carousel:before, .clients__carousel:after,
 .news__carousel:before,
-.news__carousel:after, .news__pic:before, .news__pic:after, .news__datetime time:before {
+.news__carousel:after, .news__pic:before, .news__pic:after, .news__datetime time:before, .modal-email:after {
   content: "";
   display: block;
   position: absolute; }
@@ -309,6 +309,11 @@ img.justifyright, table.justifyright {
   margin-bottom: 5px; }
 
 img.justifycenter, table.justifycenter {
+  display: block;
+  margin-left: auto;
+  margin-right: auto; }
+
+.center-block {
   display: block;
   margin-left: auto;
   margin-right: auto; }
@@ -520,7 +525,8 @@ img.justifycenter, table.justifycenter {
 ---------------------------*/
 .clients {
   font-size: 14px;
-  font-size: 1.4rem; }
+  font-size: 1.4rem;
+  position: relative; }
   .clients .addmsg {
     font-size: 14px;
     font-size: 1.4rem;
@@ -679,6 +685,104 @@ img.justifycenter, table.justifycenter {
 #map {
   height: 600px;
   width: 100%; }
+
+.modal-email {
+  -webkit-border-radius: 1rem;
+  border-radius: 1rem;
+  background-color: #f5faf5;
+  border: 3px solid #4db146;
+  bottom: 16.5rem;
+  display: none;
+  left: 50%;
+  margin-left: -270px;
+  padding: 5.6rem 2rem 3.3rem;
+  position: absolute;
+  width: 535px;
+  z-index: 9999; }
+  .modal-email:after {
+    width: 27px;
+    height: 15px;
+    background: url(../images/form-arrow.png) no-repeat center center;
+    bottom: -15px;
+    left: 50%;
+    margin-left: -14px; }
+  .modal-email form {
+    padding-top: .5rem; }
+  .modal-email .modal-title {
+    font-size: 24px;
+    font-size: 2.4rem;
+    color: #4db146;
+    font-weight: normal;
+    text-align: center; }
+  .modal-email .form-control {
+    font-size: 14px;
+    font-size: 1.4rem;
+    -webkit-border-radius: 0.5rem;
+    border-radius: 0.5rem;
+    border: 3px solid #fff;
+    color: #000;
+    height: 5rem;
+    margin-top: 2.4rem;
+    padding-left: 1.6rem;
+    padding-right: 1.6rem;
+    transition: border-color .2s;
+    width: 100%; }
+    .modal-email .form-control:focus, .modal-email .form-control:active {
+      border-color: #4db146; }
+  .modal-email textarea.form-control {
+    height: 17rem;
+    padding-top: 1rem;
+    resize: none; }
+  .modal-email .btn {
+    margin-top: 3rem;
+    width: 24rem; }
+
+.thank {
+  text-align: center;
+  padding: 2rem 0 4rem; }
+
+button.close {
+  background-image: url(../images/sprite.png);
+  background-position: -69px -36px;
+  width: 15px;
+  height: 15px;
+  border: none;
+  background-color: transparent;
+  position: absolute;
+  right: 27px;
+  top: 19px;
+  cursor: pointer; }
+  button.close:hover {
+    background-image: url(../images/sprite.png);
+    background-position: -84px -21px;
+    width: 15px;
+    height: 15px; }
+
+.backdrop {
+  position: fixed;
+  left: 0;
+  top: 0;
+  background: rgba(44, 59, 43, 0.3);
+  width: 100%;
+  height: 100%;
+  z-index: 1000; }
+
+.btn {
+  height: 57px;
+  border-radius: 57px;
+  font-size: 18px;
+  font-size: 1.8rem;
+  background-color: #4db146;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: normal;
+  padding: 1.6rem 3.5rem;
+  text-transform: uppercase;
+  transition: opacity .2s; }
+  .btn:hover {
+    opacity: .9; }
 
 /* =mobile-menu
 ---------------------------*/

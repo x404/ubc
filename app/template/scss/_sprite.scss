@@ -42,6 +42,28 @@ $icon-calendar-total-width: 100px;
 $icon-calendar-total-height: 64px;
 $icon-calendar-image: '../images/sprite.png';
 $icon-calendar: (69px, 21px, -69px, -21px, 15px, 15px, 100px, 64px, '../images/sprite.png', 'icon-calendar', );
+$icon-close-modal-hover-name: 'icon-close-modal-hover';
+$icon-close-modal-hover-x: 84px;
+$icon-close-modal-hover-y: 21px;
+$icon-close-modal-hover-offset-x: -84px;
+$icon-close-modal-hover-offset-y: -21px;
+$icon-close-modal-hover-width: 15px;
+$icon-close-modal-hover-height: 15px;
+$icon-close-modal-hover-total-width: 100px;
+$icon-close-modal-hover-total-height: 64px;
+$icon-close-modal-hover-image: '../images/sprite.png';
+$icon-close-modal-hover: (84px, 21px, -84px, -21px, 15px, 15px, 100px, 64px, '../images/sprite.png', 'icon-close-modal-hover', );
+$icon-close-modal-name: 'icon-close-modal';
+$icon-close-modal-x: 69px;
+$icon-close-modal-y: 36px;
+$icon-close-modal-offset-x: -69px;
+$icon-close-modal-offset-y: -36px;
+$icon-close-modal-width: 15px;
+$icon-close-modal-height: 15px;
+$icon-close-modal-total-width: 100px;
+$icon-close-modal-total-height: 64px;
+$icon-close-modal-image: '../images/sprite.png';
+$icon-close-modal: (69px, 36px, -69px, -36px, 15px, 15px, 100px, 64px, '../images/sprite.png', 'icon-close-modal', );
 $icon-email-name: 'icon-email';
 $icon-email-x: 0px;
 $icon-email-y: 0px;
@@ -78,7 +100,7 @@ $icon-pin: (0px, 31px, 0px, -31px, 27px, 33px, 100px, 64px, '../images/sprite.pn
 $spritesheet-width: 100px;
 $spritesheet-height: 64px;
 $spritesheet-image: '../images/sprite.png';
-$spritesheet-sprites: ($icon-arrow-l-color, $icon-arrow-l-white, $icon-calendar, $icon-email, $icon-phone, $icon-pin, );
+$spritesheet-sprites: ($icon-arrow-l-color, $icon-arrow-l-white, $icon-calendar, $icon-close-modal-hover, $icon-close-modal, $icon-email, $icon-phone, $icon-pin, );
 $spritesheet: (100px, 64px, '../images/sprite.png', $spritesheet-sprites, );
 
 // The provided mixins are intended to be used with the array-like variables

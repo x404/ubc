@@ -259,6 +259,21 @@
 		</div>
 
 		<button type="button" class="addmsg"> Залишити повідомлення </button>
+
+		<div class="modal-email">
+			<button type="button" class="close" data-dismiss="modal" aria-label="Закрыть"></button>
+			<h4 class="modal-title">НАДІСЛАТИ ПОВІДОМЛЕННЯ:</h4>  
+			<form action="#" method="post" id="quickemail-form">
+				<fieldset>
+					<input type="text" name="name" class="form-control required" value="" placeholder="Ваше им'я" aria-required /><span class="error"></span>
+					<input type="email" name="emailf" class="form-control email required" value="" placeholder="Email" aria-required /><span class="error"></span>
+					<textarea name="msg" cols="30" class="form-control required" rows="10" placeholder="Текст повідомлення" aria-required></textarea><span class="error"></span>
+					<input type="submit" name="quickemail-form" class="submit-btn btn center-block" value="Надіслати" />
+				</fieldset>
+			</form>
+		</div>
+
+
 	</section>
 	<!-- =/clients -->
 

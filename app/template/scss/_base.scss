@@ -308,3 +308,9 @@ footer{
 img.justifyleft, table.justifyleft {float:left; margin-right:10px;margin-bottom:5px;}
 img.justifyright, table.justifyright {float:right; margin-left:10px;margin-bottom:5px;}
 img.justifycenter, table.justifycenter { display: block; margin-left: auto; margin-right: auto;}
+
+.center-block{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}

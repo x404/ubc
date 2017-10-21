@@ -128,6 +128,35 @@ $(document).ready(function(){
 			};
 		init();
 	});	
+
+
+	$('.modal-email').each(function(){
+		var $this = $(this),
+			$link = $('.addmsg'),
+			$close = $this.find('.close'),
+
+			init = function(){
+				$link.on('click', openMenu);
+				$close.on('click', closeMenu);
+			},
+			openMenu = function(e){
+				e.preventDefault();
+				$('.modal-email').toggle();
+				$link.toggleClass('active');
+				$('.modal-email').find('.modal-title, form').show();
+
+				$('body').append('<div class="backdrop"></div>');
+			},
+			closeMenu = function(e){
+				e.preventDefault();
+				$('.modal-email').hide();
+				$link.removeClass('active');
+				$('.backdrop').remove();
+			};
+		init();
+	});
+
+
 });
 
 // =заглушка для IE
