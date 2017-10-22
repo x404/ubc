@@ -729,6 +729,8 @@ img.justifycenter, table.justifycenter {
     width: 100%; }
     .modal-email .form-control:focus, .modal-email .form-control:active {
       border-color: #4db146; }
+    .modal-email .form-control.error {
+      border-color: red; }
   .modal-email textarea.form-control {
     height: 17rem;
     padding-top: 1rem;
@@ -737,9 +739,15 @@ img.justifycenter, table.justifycenter {
     margin-top: 3rem;
     width: 24rem; }
 
+.modal-thank {
+  width: 668px;
+  margin-left: -334px; }
+
 .thank {
   text-align: center;
-  padding: 2rem 0 4rem; }
+  padding: 2rem 0 4rem;
+  font-size: 20px;
+  font-size: 2rem; }
 
 button.close {
   background-image: url(../images/sprite.png);
@@ -749,7 +757,7 @@ button.close {
   border: none;
   background-color: transparent;
   position: absolute;
-  right: 27px;
+  right: 17px;
   top: 19px;
   cursor: pointer; }
   button.close:hover {
@@ -783,6 +791,9 @@ button.close {
   transition: opacity .2s; }
   .btn:hover {
     opacity: .9; }
+
+label.error {
+  display: none !important; }
 
 /* =mobile-menu
 ---------------------------*/

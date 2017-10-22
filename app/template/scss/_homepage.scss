@@ -517,6 +517,9 @@
 			&:active{
 				border-color: $color3;
 			}
+			&.error{
+				border-color: red;
+			}
 		}
 		textarea.form-control{
 			height: 17rem;
@@ -530,9 +533,16 @@
 		}
 	}
 
+	.modal-thank{
+		$w: 668px;
+		width: $w;
+		margin-left: -$w/2 ;
+	}
+
 	.thank{
 		text-align: center;
 		padding: 2rem 0 4rem;
+		@include font-size(2);
 	}
 
 button.close{
@@ -540,7 +550,7 @@ button.close{
 	border: none;
 	background-color: transparent;
 	position: absolute;
-	right: 27px;
+	right: 17px;
 	top: 19px;
 	cursor: pointer;
 	&:hover{
@@ -579,4 +589,9 @@ button.close{
 	&:hover{
 		opacity: .9;
 	}
+}
+
+
+label.error{
+	display: none !important;
 }

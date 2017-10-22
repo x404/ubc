@@ -144,7 +144,6 @@ $(document).ready(function(){
 				$('.modal-email').toggle();
 				$link.toggleClass('active');
 				$('.modal-email').find('.modal-title, form').show();
-
 				$('body').append('<div class="backdrop"></div>');
 			},
 			closeMenu = function(e){
@@ -155,6 +154,26 @@ $(document).ready(function(){
 			};
 		init();
 	});
+
+
+	var thankTxt = '<div class="thank text-center"><p>Дякуємо. Ваше повідомлення успішно надіслано.</p></div>';
+	var errorTxt = 'Возникла помилка!';
+
+	// validation
+	$('#quickemail-form').validate({
+		submitHandler: function(form){
+			var strSubmit=$(form).serialize();
+			$.ajax({type: "POST",url: $(form).attr('action'),data: strSubmit,
+				success: function(){
+					$('#quickemail-form').html(thankTxt);
+					$('.modal-email').addClass('modal-thank');
+					$('.modal-email .modal-title').remove();
+					startClock('quickemail-form');
+					console.log("success");
+				}
+			}).fail(function(error){alert(errorTxt)});
+		}
+	}); 
 
 
 });
@@ -207,9 +226,47 @@ var styles = [{
 	map.setOptions({styles: styles});
 
 	var image = '/template/images/balloon.png';
-	var primna = new google.maps.Marker({
+	var mark = new google.maps.Marker({
 		position: {lat: 48.4229925, lng: 35.028076},
 		map: map,
 		icon: image
 	});
+}
+
+
+
+var timer,
+	sec = 3;
+
+
+function showTime(sendform){
+	sec = sec-1;
+	if (sec <=0) {
+		stopClock();
+
+		switch (sendform){
+			case 'quickemail-form':
+				$('.modal-email').fadeOut('normal',function(){
+					// $('.modal-email .thank').remove();
+					$('.backdrop').remove();
+				});
+				break;	
+			default:
+				modal = $("#" + sendform).closest('.modal');
+				modal.fadeOut('normal',function(){
+					modal.modal('hide');
+				});
+				break;
+		}
+	}
+}
+function stopClock(){
+	window.clearInterval(timer);
+	timer = null;
+	sec = 3;
+}
+
+function startClock(sendform){
+	if (!timer)
+		timer = window.setInterval("showTime('" + sendform + "')",1000);
 }
