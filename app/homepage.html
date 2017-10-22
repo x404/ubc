@@ -32,14 +32,18 @@
 
 <div class="outerwrapper">
 	<!-- =header -->
-	<header class="header">
+	<header class="header bgcolor">
 		<div class="container">
 			<div class="flexbox">
 					<div class="header__logo">
 						<a href="/" title=""><img src="template/images/logo.png" alt="UBC" /></a>
 					</div>
 					<div class="header__lang">
-						
+						<select name="lang" id="lang">
+							<option value="1" selected="selected">Ua</option>
+							<option value="2">EN</option>
+							<option value="3">RU</option>
+						</select>
 					</div>
 					<div class="header__nav">
 						<!-- =nav -->
@@ -394,7 +398,9 @@
 
 <script src="/template/js/owl.carousel.min.js"></script>
 <link rel="stylesheet" property="stylesheet" href="template/css/owl.carousel.css">
+<link rel="stylesheet" property="stylesheet" href="template/css/jquery.formstyler.css">
 
+<script src="/template/js/jquery.formstyler.min.js"></script>
 <script src="/template/js/engine.js"></script>
 
 <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDJon0oRy7AYzbHfD1DO2oSOEDaVRDxzHU&callback=initMap"></script>

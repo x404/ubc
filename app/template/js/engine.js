@@ -1,4 +1,8 @@
 $(document).ready(function(){
+	setTimeout(function() {
+		$('select').styler();
+	}, 100);
+
 
 	// карусель
 	$('#foo1').owlCarousel({
