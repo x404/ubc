@@ -1,3 +1,4 @@
+var ESC_KEY = 27;
 $(document).ready(function(){
 	setTimeout(function() {
 		$('select').styler();
@@ -149,10 +150,11 @@ $(document).ready(function(){
 				$link.toggleClass('active');
 				$('.modal-email').find('.modal-title, form').show();
 				$('body').append('<div class="backdrop"></div>');
+				addKeyPressHandler($this);
 			},
 			closeMenu = function(e){
 				e.preventDefault();
-				$('.modal-email').hide();
+				$('.modal-email').fadeOut();
 				$link.removeClass('active');
 				$('.backdrop').remove();
 			};
@@ -178,9 +180,19 @@ $(document).ready(function(){
 			}).fail(function(error){alert(errorTxt)});
 		}
 	}); 
-
-
 });
+
+
+function addKeyPressHandler(modal){
+	'use strict';
+	document.body.addEventListener("keyup", function(event){
+		event.preventDefault();
+		console.log(event.keyCode);
+		if (event.keyCode === ESC_KEY){
+			modal.find('.close').trigger('click')
+		}
+	});
+};
 
 // =заглушка для IE
 //event listener: DOM ready
