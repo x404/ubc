@@ -56,6 +56,7 @@ gulp.task('compress', function(){
 	pump([
 			gulp.src([  // Берем все необходимые библиотеки
 				// config.libsDir + '/jquery/dist/jquery.js',
+				config.sourceDir + '/js/jquery-1.12.4.min.js',
 				config.sourceDir + '/js/util.js',
 				config.sourceDir + '/js/modal.js',
 				config.sourceDir + '/js/tab.js',

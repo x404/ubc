@@ -1,12 +1,13 @@
 /* =structure
 ---------------------------*/
 .structure{
+	padding-bottom: 0;
 	&__box{
-		min-height: 470px;
-		width: 890px;
 		margin-left: auto;
 		margin-right: auto;
+		min-height: 380px;
 		position: relative;
+		width: 890px;
 		&-hover{
 			.structure__center{
 				border-color: $color3 !important;
@@ -32,15 +33,11 @@
 			&:before,
 			&:after{
 				@extend .before;
-				background: url(../images/plus.png) no-repeat;
-				height: 75px;
-				width: 106px;
 			}
 
 			&:after{
 				@include transition-param;
 				opacity: 0;
-				background-position: left -75px;
 			}
 
 			&:hover{
@@ -97,6 +94,18 @@
 			right: 19px;
 			bottom: 71px;
 		}
+		&:before{
+			@include sprite($icon-tl);
+		}
+		&:after{
+			@include sprite($icon-tlh);
+		}
+
+		&:hover{
+			&:after{
+				opacity: 1;
+			}
+		}
 		p{
 			padding-top: 6px;
 			text-align: right;	
@@ -120,15 +129,33 @@
 			left: 0;
 			bottom: 0;
 		}
+		&:before{
+			@include sprite($icon-tr);
+		}
+		&:after{
+			// @include sprite($icon-tlh);
+		}
 	}
 	&__bl{
 		left: $x1;
 		top: $y2;
-		p{
-			text-align: right;			
-		}
 		a{
 			width: 160px;
+		}
+		p{
+			text-align: right;
+		}
+
+		&:before,
+		&:after{
+			right: 0;
+			top: -70px;
+		}
+		&:before{
+			@include sprite($icon-bl);
+		}
+		&:after{
+			// @include sprite($icon-tlh);
 		}
 	}
 	&__br{
@@ -136,6 +163,18 @@
 		padding-left: 125px;
 		right: $x2;
 		text-align: left;
+
+		&:before,
+		&:after{
+			left: 0;
+			top: -70px;
+		}
+		&:before{
+			@include sprite($icon-br);
+		}
+		&:after{
+			// @include sprite($icon-tlh);
+		}		
 	}
 
 }
