@@ -42,6 +42,17 @@ $icon-calendar-total-width: 100px;
 $icon-calendar-total-height: 64px;
 $icon-calendar-image: '../images/sprite.png';
 $icon-calendar: (69px, 21px, -69px, -21px, 15px, 15px, 100px, 64px, '../images/sprite.png', 'icon-calendar', );
+$icon-checkmark-name: 'icon-checkmark';
+$icon-checkmark-x: 84px;
+$icon-checkmark-y: 36px;
+$icon-checkmark-offset-x: -84px;
+$icon-checkmark-offset-y: -36px;
+$icon-checkmark-width: 12px;
+$icon-checkmark-height: 10px;
+$icon-checkmark-total-width: 100px;
+$icon-checkmark-total-height: 64px;
+$icon-checkmark-image: '../images/sprite.png';
+$icon-checkmark: (84px, 36px, -84px, -36px, 12px, 10px, 100px, 64px, '../images/sprite.png', 'icon-checkmark', );
 $icon-close-modal-hover-name: 'icon-close-modal-hover';
 $icon-close-modal-hover-x: 84px;
 $icon-close-modal-hover-y: 21px;
@@ -100,7 +111,7 @@ $icon-pin: (0px, 31px, 0px, -31px, 27px, 33px, 100px, 64px, '../images/sprite.pn
 $spritesheet-width: 100px;
 $spritesheet-height: 64px;
 $spritesheet-image: '../images/sprite.png';
-$spritesheet-sprites: ($icon-arrow-l-color, $icon-arrow-l-white, $icon-calendar, $icon-close-modal-hover, $icon-close-modal, $icon-email, $icon-phone, $icon-pin, );
+$spritesheet-sprites: ($icon-arrow-l-color, $icon-arrow-l-white, $icon-calendar, $icon-checkmark, $icon-close-modal-hover, $icon-close-modal, $icon-email, $icon-phone, $icon-pin, );
 $spritesheet: (100px, 64px, '../images/sprite.png', $spritesheet-sprites, );
 
 // The provided mixins are intended to be used with the array-like variables

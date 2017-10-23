@@ -198,19 +198,20 @@ section{
 
 
 		.jq-selectbox{
+			$w: 53px;
+			$pl: 1.3rem;
 			&__select{
 				cursor: pointer;
 				.jq-selectbox__select-text{
 					background-color: $color2;
 					border: 1px solid $color2;
 					display: block;
-					$w: 53px;
 					width: $w;
 					height: $w;
 					padding-top: 1.6rem;
 					border-radius: 50%;
 					text-align: left;
-					padding-left: 1.3rem;
+					padding-left: $pl;
 				}
 			}
 			&__trigger{
@@ -222,6 +223,50 @@ section{
 				border-left: 3px solid transparent;
 				border-right: 3px solid transparent;
 				border-top: 5px solid #5d645d;				
+			}
+
+			&__dropdown{
+				background-color: $color2;
+				width: $w;
+				border-radius: 0 0 $w $w;
+				padding-bottom: .5rem;
+				margin-top: -1.5rem;
+				ul{
+					li{
+						cursor: pointer;
+						margin: 1rem 0;
+						padding-left: $pl;
+						text-align: left;
+						&.selected,
+						&:hover{
+							color: $color3;
+						}
+
+						&.sel{
+							position: relative;
+							&:after{
+								@extend .before;
+								@include sprite($icon-checkmark);
+								right: 6px;
+								top: 5px;
+							}
+						}
+					}
+				}
+			}
+
+			&.dropdown{
+				.jq-selectbox{
+					&__select{
+						.jq-selectbox__select-text{
+							color: $color3;
+							border-radius: 50% 50% 0 0;
+						}
+					}
+					&__trigger{
+						border-top-color: $color3;
+					}
+				}
 			}
 		}
 	}

@@ -186,7 +186,7 @@ input::-moz-focus-inner {
   .tdu:hover {
     text-decoration: none; }
 
-.before, header .title:after, .contacts__adr:before, .contacts__tel:before, .contacts__mail:before, .structure__box > div:not(.structure__center):before, .structure__box > div:not(.structure__center):after, .production div.owl-nav .owl-prev:before,
+.before, header .title:after, .header__lang .jq-selectbox__dropdown ul li.sel:after, .contacts__adr:before, .contacts__tel:before, .contacts__mail:before, .structure__box > div:not(.structure__center):before, .structure__box > div:not(.structure__center):after, .production div.owl-nav .owl-prev:before,
 .production div.owl-nav .owl-next:before, .clients__carousel:before, .clients__carousel:after,
 .news__carousel:before,
 .news__carousel:after, .news__pic:before, .news__pic:after, .news__datetime time:before, .modal-email:after {
@@ -238,6 +238,33 @@ section {
       border-left: 3px solid transparent;
       border-right: 3px solid transparent;
       border-top: 5px solid #5d645d; }
+    .header__lang .jq-selectbox__dropdown {
+      background-color: #fff;
+      width: 53px;
+      border-radius: 0 0 53px 53px;
+      padding-bottom: .5rem;
+      margin-top: -1.5rem; }
+      .header__lang .jq-selectbox__dropdown ul li {
+        cursor: pointer;
+        margin: 1rem 0;
+        padding-left: 1.3rem;
+        text-align: left; }
+        .header__lang .jq-selectbox__dropdown ul li.selected, .header__lang .jq-selectbox__dropdown ul li:hover {
+          color: #4db146; }
+        .header__lang .jq-selectbox__dropdown ul li.sel {
+          position: relative; }
+          .header__lang .jq-selectbox__dropdown ul li.sel:after {
+            background-image: url(../images/sprite.png);
+            background-position: -84px -36px;
+            width: 12px;
+            height: 10px;
+            right: 6px;
+            top: 5px; }
+    .header__lang .jq-selectbox.dropdown .jq-selectbox__select .jq-selectbox__select-text {
+      color: #4db146;
+      border-radius: 50% 50% 0 0; }
+    .header__lang .jq-selectbox.dropdown .jq-selectbox__trigger {
+      border-top-color: #4db146; }
   .header .flexbox {
     align-items: center; }
 
