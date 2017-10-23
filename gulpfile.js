@@ -55,7 +55,7 @@ gulp.task('browser-sync', function(){
 gulp.task('compress', function(){
 	pump([
 			gulp.src([  // Берем все необходимые библиотеки
-				config.libsDir + '/jquery/dist/jquery.js',
+				// config.libsDir + '/jquery/dist/jquery.js',
 				config.sourceDir + '/js/util.js',
 				config.sourceDir + '/js/modal.js',
 				config.sourceDir + '/js/tab.js',
@@ -68,7 +68,7 @@ gulp.task('compress', function(){
 			gulp.dest(config.sourceDir + '/js') // Выгружаем в папку app/js
 		]
 	);
-})
+});
 
 // перед сборкой проетка надо сделать очистку папки dist от предыдущих версий
 gulp.task('clean', function() {
