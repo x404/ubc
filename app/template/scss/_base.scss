@@ -114,14 +114,14 @@ header{
 	.title{
 		display: inline-block;
 		position: relative;
-		margin: 6.5rem 0 4.8rem; 
+		margin: 6.5rem 0 4rem; 
 		&:after{
 			@extend .before;
 			border-top: 1px solid $color5;
+			bottom: -10px;
 			left: 50%;
 			margin-left: -32px;
 			width: 65px;
-			bottom: -15px;
 		}
 	}
 }
@@ -190,6 +190,7 @@ section{
 
 	&__lang{
 		margin-left: 4.5rem;
+		padding-top: 1rem;
 		text-transform: uppercase;
 		@include font-size(1.4);
 
@@ -199,7 +200,7 @@ section{
 
 		.jq-selectbox{
 			$w: 53px;
-			$pl: 1.3rem;
+			$pl: 1.1rem;
 			&__select{
 				cursor: pointer;
 				.jq-selectbox__select-text{
@@ -208,7 +209,7 @@ section{
 					display: block;
 					width: $w;
 					height: $w;
-					padding-top: 1.6rem;
+					padding-top: 1.8rem;
 					border-radius: 50%;
 					text-align: left;
 					padding-left: $pl;
@@ -217,7 +218,7 @@ section{
 			&__trigger{
 				position: absolute;
 				right: 11px;
-				top: 24px;
+				top: 26px;
 				width: 0;
 				height: 0;
 				border-left: 3px solid transparent;
@@ -278,6 +279,7 @@ section{
 
 .mainnav{
 	margin-left: 9rem;
+	margin-top: 1rem;
 	ul{
 		display: flex;
 
@@ -336,6 +338,12 @@ section{
 ---------------------------*/
 .contacts{
 	color: $color4;
+	padding-bottom: 3rem;
+	header{
+		.title{
+			margin: 9.5rem 0 5.4rem;
+		}
+	}
 	a{
 		text-decoration: none;
 	}

@@ -5,7 +5,7 @@
 	&__box{
 		margin-left: auto;
 		margin-right: auto;
-		min-height: 380px;
+		min-height: 322px;
 		position: relative;
 		width: 890px;
 		&-hover{
@@ -71,7 +71,7 @@
 	$x1: 20px;
 	$y1: -96px;
 	$x2: 0px;
-	$y2: 270px;
+	$y2: 208px;
 
 	$w: 106px;
 
@@ -128,13 +128,14 @@
 	}
 	&__tr{
 		// padding-left: 20px;
-		right: 6px;
+		right: 0;
 		text-align: left;
-		top: -163px;
+		top: -167px;
 		width: 180px;
 		a{
-			width: 293px;
 			padding-left: 120px;
+			padding-top: 5px;
+			width: 293px;
 		}
 
 		p{
@@ -154,11 +155,10 @@
 		}
 	}
 	&__bl{
-		left: $x1;
+		left: 5px;
 		top: $y2;
 		a{
-			// padding-left: 123px;
-			padding-top: 60px;
+			padding-top: 71px;
 			padding-right: 88px;
 			width: 253px;
 		}
@@ -195,7 +195,7 @@
 
 		a{
 			padding-left: 123px;
-			padding-top: 60px;
+			padding-top: 71px;
 			width: 253px;
 		}
 
@@ -215,16 +215,17 @@
 /* =production
 ---------------------------*/
 .production{
+	padding-bottom: 8rem;
 	&__carousel{
-		margin-top: 10rem;
+		margin-top: 11rem;
 	}
 	div.owl{
 		&-nav,
 		&-dots{
 			position: absolute;
-			top: -120px;
 		}
 		&-nav{
+			top: -113px;
 			$w: 1260px;
 			width: $w;
 			left: 50%;
@@ -256,6 +257,7 @@
 		}
 
 		&-dots{
+			top: -116px;
 			width: 100%;
 			text-align: center;
 		}
@@ -313,7 +315,9 @@
 			background-color: $color2;
 			border-radius: 2.9rem;
 			color: $color3;
+			@include font-size(1.4);
 			display: flex;
+			margin-top: 4rem;
 			height: 5.8rem;
 			padding: 0 2.5rem;
 			position: relative;
@@ -344,10 +348,10 @@
 		color: $color2;
 		display: block;
 		$h: 5.8rem;
-		height: $h;
 		border-radius: $h;
 		cursor: pointer;
-		margin: 4.5rem auto 0;
+		height: $h;
+		margin: 4.2rem auto 0;
 		padding: 0 4rem;
 		text-transform: uppercase;
 		&:hover{
@@ -367,6 +371,10 @@
 
 	&__carousel{
 		margin-top: 6.5rem;
+	}
+
+	.owl-dots{
+		margin-top: 2.5rem;
 	}
 }
 
@@ -407,10 +415,19 @@
 	$r2: 10px;
 	padding-bottom: 5.8rem;
 	&__carousel{
-
 		.owl-nav{
 			top: 178px;
 		}
+	}
+
+	header{
+		.title{
+			margin-top: 5.8rem;
+		}
+	}
+
+	.owl-carousel{
+		margin-top: 1.6rem;
 	}
 
 	&__item{
@@ -492,7 +509,7 @@
 	&__desc{
 		background: $color2;
 		border-radius: 0 0 $r2 $r2;
-		padding:2.7rem 0 3rem;
+		padding:1.9rem 0 3rem;
 		text-align: center;
 		hr{
 			width: 42px;
@@ -506,7 +523,7 @@
 		@include font-size(1.6);
 		text-transform: uppercase;
 		font-weight: normal;
-		margin-top: 2.5rem;
+		margin-top: 3.3rem;
 		min-height: 7rem;
 	}
 
@@ -532,10 +549,10 @@
 ---------------------------*/
 
 
-#map{
-	height: 600px;
-	width: 100%;
-}
+	#map{
+		height: 600px;
+		width: 100%;
+	}
 
 
 
