@@ -277,20 +277,37 @@ section {
       .mainnav ul li:first-child {
         margin-left: 0; }
       .mainnav ul li a {
-        border-bottom: 2px solid transparent;
+        margin-top: 12px;
+        padding-bottom: 12px;
         text-decoration: none;
         text-transform: uppercase;
         -webkit-transition: all 0.2s ease-out;
         transition: all 0.2s ease-out; }
         .mainnav ul li a:hover {
-          border-bottom: 2px solid #4db146;
           color: #4db146; }
+  .mainnav a {
+    position: relative;
+    display: block;
+    transition: color 0.1s,background-color 0.1s,padding 0.2s ease-in; }
+  .mainnav a::before {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 3px;
+    left: 0;
+    height: 3px;
+    width: 100%;
+    background-color: #4db146;
+    transform-origin: right top;
+    transform: scale(0, 1);
+    transition: color 0.1s,transform 0.2s ease-out; }
+  .mainnav a:active::before {
+    background-color: #4db146; }
+  .mainnav a:hover::before, .mainnav a:focus::before {
+    transform-origin: left top;
+    transform: scale(1, 1); }
 
 /* =/header
----------------------------*/
-/* =navigation
----------------------------*/
-/* =/navigation
 ---------------------------*/
 /* =contacts
 ---------------------------*/
@@ -387,30 +404,26 @@ img.justifycenter, table.justifycenter {
     .structure__box-hover .structure__center {
       border-color: #4db146 !important; }
     .structure__box > div:not(.structure__center) {
+      height: 200px;
       position: absolute;
-      width: 290px;
-      height: 200px; }
+      width: 290px; }
       .structure__box > div:not(.structure__center) a {
         font-size: 14px;
         font-size: 1.4rem;
-        text-decoration: none;
+        -webkit-transition: all 0.2s ease-out;
+        transition: all 0.2s ease-out;
         display: block;
+        height: 100%;
         position: relative;
+        text-decoration: none;
         z-index: 999;
-        height: 100%; }
-        .structure__box > div:not(.structure__center) a img, .structure__box > div:not(.structure__center) a p {
-          -webkit-transition: all 0.2s ease-out;
-          transition: all 0.2s ease-out; }
+        transform-origin: center center; }
       .structure__box > div:not(.structure__center):after {
         -webkit-transition: opacity 0.2s ease-out;
         transition: opacity 0.2s ease-out;
         opacity: 0; }
       .structure__box > div:not(.structure__center):hover:after {
         opacity: 1; }
-      .structure__box > div:not(.structure__center):hover img, .structure__box > div:not(.structure__center):hover p {
-        transform: scale(1.2); }
-      .structure__box > div:not(.structure__center):hover p {
-        padding-top: 1rem; }
   .structure__center {
     font-size: 29px;
     font-size: 2.9rem;
@@ -428,14 +441,15 @@ img.justifycenter, table.justifycenter {
     margin: 155px auto;
     text-align: center;
     width: 258px; }
-    .structure__center:hover {
+    .structure__center:hover, .structure__center.hover {
       border-color: #4db146; }
+  .structure__tl:hover a, .structure__bl:hover a {
+    transform: scale(1.2) translateX(-8px); }
+  .structure__tr:hover a, .structure__br:hover a {
+    transform: scale(1.2) translateX(10px); }
   .structure__tl {
     left: 20px;
     top: -96px; }
-    .structure__tl a {
-      width: 247px;
-      padding-right: 100px; }
     .structure__tl:before, .structure__tl:after {
       right: 19px;
       bottom: 71px; }
@@ -451,17 +465,21 @@ img.justifycenter, table.justifycenter {
       height: 75px; }
     .structure__tl:hover:after {
       opacity: 1; }
+    .structure__tl a {
+      width: 253px;
+      padding-right: 100px;
+      padding-bottom: 50px; }
     .structure__tl p {
       padding-top: 6px;
       text-align: right; }
   .structure__tr {
-    padding-left: 125px;
     right: 6px;
     text-align: left;
     top: -163px;
     width: 180px; }
     .structure__tr a {
-      width: 185px; }
+      width: 293px;
+      padding-left: 120px; }
     .structure__tr p {
       padding-top: 9px; }
     .structure__tr:before, .structure__tr:after {
@@ -472,34 +490,54 @@ img.justifycenter, table.justifycenter {
       background-position: -212px 0px;
       width: 106px;
       height: 75px; }
+    .structure__tr:after {
+      background-image: url(../images/spriteplus.png);
+      background-position: -212px -75px;
+      width: 106px;
+      height: 75px; }
   .structure__bl {
     left: 20px;
-    top: 370px; }
+    top: 270px; }
     .structure__bl a {
-      width: 160px; }
+      padding-top: 60px;
+      padding-right: 88px;
+      width: 253px; }
     .structure__bl p {
       text-align: right; }
     .structure__bl:before, .structure__bl:after {
       right: 0;
-      top: -70px; }
+      top: 0; }
     .structure__bl:before {
       background-image: url(../images/spriteplus.png);
       background-position: 0px 0px;
       width: 106px;
       height: 75px; }
+    .structure__bl:after {
+      background-image: url(../images/spriteplus.png);
+      background-position: 0px -150px;
+      width: 106px;
+      height: 73px; }
   .structure__br {
-    top: 370px;
-    padding-left: 125px;
+    top: 270px;
     right: 0px;
     text-align: left; }
     .structure__br:before, .structure__br:after {
       left: 0;
-      top: -70px; }
+      top: 0; }
+    .structure__br a {
+      padding-left: 123px;
+      padding-top: 60px;
+      width: 253px; }
     .structure__br:before {
       background-image: url(../images/spriteplus.png);
       background-position: -106px 0px;
       width: 106px;
       height: 75px; }
+    .structure__br:after {
+      background-image: url(../images/spriteplus.png);
+      background-position: -106px -150px;
+      width: 106px;
+      height: 73px; }
 
 /* =/structure
 ---------------------------*/

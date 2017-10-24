@@ -243,7 +243,9 @@ gulp.task('build', ['clean', 'img', 'scss', 'compress'], function(){
 	// переносим css файлы
 	var buildCss = gulp.src([ // Переносим CSS стили в продакшен
 		'app/template/css/styles.min.css',
-		'app/template/css/owl.carousel.css'
+		'app/template/css/owl.carousel.css',
+		'app/template/css/jquery.formstyler.css',
+		'app/template/css/layerslider.css'
 	])
 	.pipe(gulp.dest('dist/template/css'));
 
@@ -254,6 +256,7 @@ gulp.task('build', ['clean', 'img', 'scss', 'compress'], function(){
 	var buildJs = gulp.src(config.sourceDir + '/js/**/*').pipe(gulp.dest('dist/template/js'));	
 	var buildTmp = gulp.src('app/tmp/*').pipe(gulp.dest('dist/tmp'));
 	var buildFonts = gulp.src(config.sourceDir + '/fonts/**/*').pipe(gulp.dest('dist/template/fonts')); // Переносим шрифты в продакшен
+	var buildImg = gulp.src('app/images/**/*').pipe(gulp.dest('dist/images')); // Переносим изображения в продакшен
 	var buildOutdate = gulp.src('app/outdatedbrowser/**/*').pipe(gulp.dest('dist/outdatedbrowser'));
 
 });

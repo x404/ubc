@@ -287,28 +287,47 @@ section{
 				margin-left: 0;
 			}
 			a{
-				border-bottom: 2px solid rgba(0,0,0,0);
+				$y: 12px;
+				margin-top: $y;
+				padding-bottom: $y;
 				text-decoration: none;
 				text-transform: uppercase;
 				@include transition;
 				&:hover{
 					$color: $color3;
-					border-bottom: 2px solid $color;
 					color: $color;
 				}
 			}
 		}
 	}
+
+	a {
+	    position: relative;
+	    display: block;
+	    transition: color 0.1s,background-color 0.1s,padding 0.2s ease-in;
+	}
+	a::before {
+	    content: '';
+	    display: block;
+	    position: absolute;
+	    bottom: 3px;
+	    left: 0;
+	    height: 3px;
+	    width: 100%;
+	    background-color: $color3;
+	    transform-origin: right top;
+	    transform: scale(0, 1);
+	    transition: color 0.1s,transform 0.2s ease-out;
+	}
+	a:active::before {
+	    background-color: $color3;
+	}
+	a:hover::before, a:focus::before {
+	    transform-origin: left top;
+	    transform: scale(1, 1);
+	}	
 }
-
 /* =/header
----------------------------*/
-
-
-
-/* =navigation
----------------------------*/
-/* =/navigation
 ---------------------------*/
 
 

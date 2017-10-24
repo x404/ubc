@@ -16,19 +16,18 @@
 
 		& > div:not(.structure__center){
 			@extend .ptsans;
+			height: 200px;
 			position: absolute;
 			width: 290px;
-			height: 200px;
 			a{
 				@include font-size(1.4);
-				text-decoration: none;
+				@include transition;
 				display: block;
-				position: relative;
-				z-index: 999;
 				height: 100%;
-				img,p{
-					@include transition;
-				}
+				position: relative;
+				text-decoration: none;
+				z-index: 999;
+				transform-origin: center center;
 			}
 			&:before,
 			&:after{
@@ -43,12 +42,6 @@
 			&:hover{
 				&:after{
 					opacity: 1;
-				}
-				img,p{
-					transform: scale(1.2)
-				}
-				p{
-					padding-top: 1rem;
 				}
 			}
 		}
@@ -69,7 +62,8 @@
 		margin: 155px auto;
 		text-align: center;
 		width: $s;
-		&:hover{
+		&:hover,
+		&.hover{
 			border-color: $color3;
 		}
 	}
@@ -77,18 +71,32 @@
 	$x1: 20px;
 	$y1: -96px;
 	$x2: 0px;
-	$y2: 370px;
+	$y2: 270px;
 
 	$w: 106px;
 
+	&__tl,
+	&__bl{
+		&:hover{
+			a{
+				transform: scale(1.2) translateX(-8px);
+			}
+		}
+	}
+
+	&__tr,
+	&__br{
+		&:hover{
+			a{
+				transform: scale(1.2) translateX(10px);
+			}
+		}
+	}
 
 	&__tl{
 		left: $x1;
 		top: $y1;
-		a{
-			width: 247px;
-			padding-right: 100px;
-		}
+
 		&:before,
 		&:after{
 			right: 19px;
@@ -106,20 +114,29 @@
 				opacity: 1;
 			}
 		}
+
+		a{
+			width: 253px;
+			padding-right: 100px;
+			padding-bottom: 50px;
+		}
+
 		p{
 			padding-top: 6px;
 			text-align: right;	
 		}
 	}
 	&__tr{
-		padding-left: 125px;
+		// padding-left: 20px;
 		right: 6px;
 		text-align: left;
 		top: -163px;
 		width: 180px;
 		a{
-			width: 185px;	
+			width: 293px;
+			padding-left: 120px;
 		}
+
 		p{
 			padding-top: 9px;
 		}
@@ -133,15 +150,20 @@
 			@include sprite($icon-tr);
 		}
 		&:after{
-			// @include sprite($icon-tlh);
+			@include sprite($icon-trh);
 		}
 	}
 	&__bl{
 		left: $x1;
 		top: $y2;
 		a{
-			width: 160px;
+			// padding-left: 123px;
+			padding-top: 60px;
+			padding-right: 88px;
+			width: 253px;
 		}
+
+
 		p{
 			text-align: right;
 		}
@@ -149,31 +171,39 @@
 		&:before,
 		&:after{
 			right: 0;
-			top: -70px;
+			top: 0;
+			// top: -70px;
 		}
 		&:before{
 			@include sprite($icon-bl);
 		}
 		&:after{
-			// @include sprite($icon-tlh);
+			@include sprite($icon-blh);
 		}
 	}
 	&__br{
 		top: $y2;
-		padding-left: 125px;
+		// padding-left: 125px;
 		right: $x2;
 		text-align: left;
 
 		&:before,
 		&:after{
 			left: 0;
-			top: -70px;
+			top: 0;
 		}
+
+		a{
+			padding-left: 123px;
+			padding-top: 60px;
+			width: 253px;
+		}
+
 		&:before{
 			@include sprite($icon-br);
 		}
 		&:after{
-			// @include sprite($icon-tlh);
+			@include sprite($icon-brh);
 		}		
 	}
 

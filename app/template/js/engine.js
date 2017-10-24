@@ -180,6 +180,13 @@ $(document).ready(function(){
 			}).fail(function(error){alert(errorTxt)});
 		}
 	}); 
+
+
+
+	$('.structure__box > div:not(.structure__center)').hover(
+		function(){$(this).closest('.structure__box').find('.structure__center').addClass('hover')},
+		function(){$(this).closest('.structure__box').find('.structure__center').removeClass('hover')}
+	);	
 });
 
 
