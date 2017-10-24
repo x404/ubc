@@ -30,7 +30,7 @@
 <![endif]-->
 
 </head>
-<body>
+<body data-spy="scroll" data-target="#navbar" data-offset="98">
 
 <div class="outerwrapper">
 	<!-- =header -->
@@ -50,12 +50,12 @@
 					<div class="header__nav">
 						<!-- =nav -->
 						<nav id="navbar" class="mainnav">
-							<ul>
-								<li><a href="#" title="">Про нас</a></li>
-								<li><a href="#" title="">Продукція</a></li>
-								<li><a href="#" title="">Privat Label</a></li>
-								<li><a href="#" title="">Новини</a></li>
-								<li><a href="#" title="">Контакти</a></li>
+							<ul class="nav nav-tabs" role="tablist">
+								<li><a class="nav-link" href="#about" title="">Про нас</a></li>
+								<li><a class="nav-link" href="#production" title="">Продукція</a></li>
+								<li><a class="nav-link" href="#clients" title="">Privat Label</a></li>
+								<li><a class="nav-link" href="news.html" title="">Новини</a></li>
+								<li><a class="nav-link" href="#contacts" title="">Контакти</a></li>
 							</ul>
 						</nav>
 						<!-- =/nav -->
@@ -65,8 +65,7 @@
 							<span class="icon-bar"></span>
 						</button>
 						<button type="button" class="close-menu"><img src="template/images/close.png" alt=""></button>
-					</div>
-				
+					</div>				
 			</div>
 		</div>
 	</header>
@@ -546,7 +545,7 @@
 	<!-- =/slider -->
 
 	<!-- =about -->
-	<section class="about">
+	<section class="about" id="about">
 		<div class="container">
 			<header>
 				<h1 class="title">Про нас</h1>
@@ -599,7 +598,7 @@
 
 
 	<!-- =products -->
-	<section class="production bgcolor">
+	<section class="production bgcolor" id="production">
 		<header>
 			<h1 class="title">Продукція</h1>
 		</header>
@@ -680,7 +679,7 @@
 
 
 	<!-- =clients -->
-	<section class="clients">
+	<section class="clients" id="clients">
 		<div class="container">
 			<header>
 				<h1 class="title">Private Label</h1>
@@ -826,7 +825,7 @@
 
 
 	<!-- =contacts -->
-	<section class="contacts">
+	<section class="contacts" id="contacts">
 		<div class="container">
 			<header>
 				<h1 class="title">Контакти</h1>

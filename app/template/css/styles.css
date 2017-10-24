@@ -210,6 +210,12 @@ section {
 ---------------------------*/
 .header {
   padding: 2.6rem 0; }
+  .header.fixed {
+    position: fixed;
+    z-index: 99;
+    left: 0;
+    top: 0;
+    width: 100%; }
   .header__nav {
     flex-grow: 1; }
   .header__lang {

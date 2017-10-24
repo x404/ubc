@@ -1,5 +1,21 @@
 var ESC_KEY = 27;
 $(document).ready(function(){
+
+	// scroll page
+	$('nav a[href*=\\#]:not([href=\\#])').click(function() {
+		if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+			var target = $(this.hash);
+			target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+			if (target.length) {
+				$('html,body').animate({
+					scrollTop: target.offset().top-98
+				}, 1000);
+				return false;
+			}
+		}
+	});
+
+
 	setTimeout(function() {
 		$('select').styler();
 	}, 100);
