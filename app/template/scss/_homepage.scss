@@ -175,7 +175,6 @@
 		&:after{
 			right: 0;
 			top: 0;
-			// top: -70px;
 		}
 		&:before{
 			@include sprite($icon-bl);
@@ -186,7 +185,6 @@
 	}
 	&__br{
 		top: $y2;
-		// padding-left: 125px;
 		right: $x2;
 		text-align: left;
 
