@@ -14,6 +14,36 @@ $(document).ready(function(){
 			}
 		}
 	});
+	
+	// scroll Page
+	var panel = $('.header'),
+		pos = panel.offset();
+
+	$(window).scroll(function(){
+		$this = $(this);
+
+		if ($(this).scrollTop() > 200){
+			$("#up").fadeIn();
+		} else{
+			$("#up").fadeOut();
+		}
+
+
+		h = $('.header').height() + 9;
+		if($this.scrollTop() > h && panel.hasClass('default')) {
+			panel.removeClass('default').addClass('fixed');
+			$("body").addClass('bodyFixed');
+		}
+		else {
+			if ($this.scrollTop() < h){
+				if($this.scrollTop() <= pos.top && panel.hasClass('fixed')) {
+					panel.removeClass('fixed').addClass('default');
+					$("body").removeClass('bodyFixed');
+				}
+			}
+		}
+	});
+
 
 
 	setTimeout(function() {

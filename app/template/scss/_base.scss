@@ -39,11 +39,11 @@ body{
 	font-family: 'Open Sans', sans-serif;
 	@include flexbox;
 	@include font-size(1.6);
-	border-top: 3px solid $color3;
 	color: $color4;
 	flex-flow: column;
 	font-display: swap;
 	height: 100vh;
+	padding-top: 12.4rem;
 }
 
 html, body{
@@ -180,18 +180,46 @@ section{
 /* =header
 ---------------------------*/
 .header{
-	&.fixed{
-		position: fixed;
-		z-index: 99;
-		left: 0;
-		top: 0;
-		width: 100%;	
-	}
-	
+	border-top: 3px solid $color3;
+	height: 12.4rem;
 	padding: 2.6rem 0;
-	&__logo{
+	position: fixed;
+	width: 100%;
+	z-index: 10;
+	top: 0;
+	@include transition;
 
+	&.fixed{
+		box-shadow: 0 0 15px #ccc;
+		height: 83px;
+		left: 0;
+		padding-top: 1.2rem;
+		z-index: 1000;
+
+		.header{
+			&__logo{
+				img{
+					width: 155px;
+					height: auto;
+				}
+			}
+			&__lang{
+				padding-top: .4rem;
+			}
+
+		}
+		.mainnav{
+			margin-top: .2rem;
+		}
+		// nav{
+		// 	padding-top: 3rem;
+		// }
+
+		// .login{
+		// 	padding-top: 3rem;
+		// }
 	}
+
 	&__nav{
 		flex-grow: 1;
 	}
@@ -201,10 +229,6 @@ section{
 		padding-top: 1rem;
 		text-transform: uppercase;
 		@include font-size(1.4);
-
-		.jq-selectbox{
-		}
-
 
 		.jq-selectbox{
 			$w: 53px;
@@ -217,7 +241,7 @@ section{
 					display: block;
 					width: $w;
 					height: $w;
-					padding-top: 1.8rem;
+					padding-top: 1.6rem;
 					border-radius: 50%;
 					text-align: left;
 					padding-left: $pl;
@@ -226,7 +250,7 @@ section{
 			&__trigger{
 				position: absolute;
 				right: 11px;
-				top: 26px;
+				top: 24px;
 				width: 0;
 				height: 0;
 				border-left: 3px solid transparent;

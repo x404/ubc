@@ -297,39 +297,29 @@
 		}
 	}
 	&__item{
-		&-default{
-			display: flex;
-		}
-		&-overlay{
-			position: absolute;
-			left: 0;
-			top: 0;
-			opacity: 0;
-			z-index: -1;
-			@include transition-param;				
-		}
-
-		&:hover{
-			.production{
-				&__item{
-					&-default{
-					}
-					&-overlay{
-						opacity: 1;
-						z-index: 1;
-					}
-				}
-			}
-		}
+		display: flex;
+		overflow: hidden;
 		&-left{
+			flex-basis: 35%;
+			position: relative;
 			img{
 				vertical-align: top;
+				position: absolute;
+				right: 0;
+				@include transition-param(transform, .3s);
+			}
+			&:hover{
+				img{
+					transform: translateX(963px);
+				}
 			}
 		}
 		&-right{
 			padding-left: 3rem;
-			width: 845px;
+			width: 920px;
 			text-align: justify;
+			// position: relative;
+			// z-index: 2;
 		}
 
 		&-top{
@@ -340,7 +330,7 @@
 		&-text{
 			@include font-size(1.4);
 			@extend .ptsans;
-			max-height: 245px;
+			min-height: 245px;
 			overflow: hidden;
 			text-overflow: ellipsis
 		}
