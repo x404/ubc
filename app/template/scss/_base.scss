@@ -204,12 +204,19 @@ section{
 				}
 			}
 			&__lang{
-				padding-top: .4rem;
+				padding-top: 0;
 			}
 
 		}
 		.mainnav{
-			margin-top: .2rem;
+			margin-top: 0;
+			ul{
+				li{
+					a{
+						margin-top: 5px;
+					}
+				}
+			}
 		}
 		// nav{
 		// 	padding-top: 3rem;

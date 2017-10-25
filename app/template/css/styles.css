@@ -228,9 +228,11 @@ section {
       width: 155px;
       height: auto; }
     .header.fixed .header__lang {
-      padding-top: .4rem; }
+      padding-top: 0; }
     .header.fixed .mainnav {
-      margin-top: .2rem; }
+      margin-top: 0; }
+      .header.fixed .mainnav ul li a {
+        margin-top: 5px; }
   .header__nav {
     flex-grow: 1; }
   .header__lang {
@@ -429,13 +431,14 @@ img.justifycenter, table.justifycenter {
 /* =structure
 ---------------------------*/
 .structure {
+  margin-bottom: 7.5rem;
   padding-bottom: 0; }
   .structure .container {
     position: relative; }
   .structure__box {
     margin-left: auto;
     margin-right: auto;
-    min-height: 322px;
+    height: 400px;
     position: relative;
     width: 890px; }
     .structure__box-hover .structure__center {
@@ -653,7 +656,8 @@ img.justifycenter, table.justifycenter {
         vertical-align: top;
         position: absolute;
         right: 0;
-        transition: transform 0.3s cubic-bezier(0.08, 0.37, 0.14, 0.53); }
+        transition: transform 0.3s cubic-bezier(0.08, 0.37, 0.14, 0.53);
+        will-change: transform; }
       .production__item-left:hover img {
         transform: translateX(963px); }
     .production__item-right {
@@ -769,12 +773,12 @@ img.justifycenter, table.justifycenter {
   .news .owl-carousel {
     margin-top: 1.6rem; }
   .news__link {
+    -webkit-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
     display: inline-block;
     border: 3px solid rgba(255, 255, 255, 0);
     border-radius: 12px;
-    text-decoration: none;
-    -webkit-transition: all 0.2s ease-out;
-    transition: all 0.2s ease-out; }
+    text-decoration: none; }
     .news__link:hover {
       border-color: #4db146;
       color: #4db146; }
@@ -814,14 +818,14 @@ img.justifycenter, table.justifycenter {
     .news__pic:after {
       -webkit-transition: all 0.2s ease-out;
       transition: all 0.2s ease-out;
-      border-radius: 10px 10px 0 0;
       background: rgba(255, 255, 255, 0.63);
-      z-index: 99;
-      width: 100%;
-      left: 0;
-      top: 0;
+      border-radius: 10px 10px 0 0;
       height: 100%;
-      opacity: 0; }
+      left: 0;
+      opacity: 0;
+      top: 0;
+      width: 100%;
+      z-index: 99; }
   .news__desc {
     background: #fff;
     border-radius: 0 0 10px 10px;

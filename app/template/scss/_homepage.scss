@@ -1,6 +1,7 @@
 /* =structure
 ---------------------------*/
 .structure{
+	margin-bottom: 7.5rem;
 	padding-bottom: 0;
 	.container{
 		position: relative;
@@ -8,7 +9,7 @@
 	&__box{
 		margin-left: auto;
 		margin-right: auto;
-		min-height: 322px;
+		height: 400px;
 		position: relative;
 		width: 890px;
 		&-hover{
@@ -303,8 +304,8 @@
 				vertical-align: top;
 				position: absolute;
 				right: 0;
-				// @include transition-param(transform, .3s);
-				transition: transform .3s cubic-bezier(.08,.37,.14,.53)
+				transition: transform .3s cubic-bezier(.08,.37,.14,.53);
+				will-change: transform;
 			}
 			&:hover{
 				img{
@@ -316,8 +317,6 @@
 			padding-left: 3rem;
 			width: 920px;
 			text-align: justify;
-			// position: relative;
-			// z-index: 2;
 		}
 
 		&-top{
@@ -455,12 +454,11 @@
 	&__item{
 	}
 	&__link{
+		@include transition;
 		display: inline-block;
 		border: 3px solid rgba(255,255,255,0);
 		border-radius: $r;
 		text-decoration: none;
-		@include transition;
-		// text-align: center;
 		&:hover{
 			border-color: $color3;
 			color: $color3;
@@ -517,14 +515,14 @@
 		&:after{
 			@extend .before;
 			@include transition;
-			border-radius: $r2 $r2 0 0;
 			background: rgba(255,255,255, .63);
-			z-index: 99;
-			width: 100%;
-			left: 0;
-			top: 0;
+			border-radius: $r2 $r2 0 0;
 			height: 100%;
+			left: 0;
 			opacity: 0;
+			top: 0;
+			width: 100%;
+			z-index: 99;
 		}
 	}
 
