@@ -309,11 +309,11 @@ section{
 }
 
 .mainnav{
-	margin-left: 9rem;
+	// margin-left: 9rem;
 	margin-top: 1rem;
 	ul{
 		display: flex;
-
+		justify-content: flex-end;
 		li{
 			margin-left: 8.2rem;
 			&:first-child{
@@ -425,16 +425,17 @@ section{
 /* =footer
 ---------------------------*/
 footer{
+	@include font-size(1.4);
 	border-bottom: 3px solid $color3;
 	padding: 4.5rem 0;
 }
 .footer{
-	&__left{
-
-	}
 	&__right{
 		text-align: right;
 		flex-grow: 1;
+		a{
+			@extend .tdu;
+		}
 	}
 }
 /* =/footer

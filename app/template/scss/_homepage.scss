@@ -258,7 +258,7 @@
 		}
 		&-nav{
 			top: -113px;
-			$w: 1260px;
+			$w: 1140px;
 			width: $w;
 			left: 50%;
 			margin-left: -$w/2;
@@ -281,7 +281,12 @@
 				}
 			}
 
+			.owl-next{
+				right: 0;
+			}
+			
 			.owl-prev{
+				left: 0;
 				&:before{
 					@include sprite($icon-arrow-l-color);
 				}
@@ -315,8 +320,8 @@
 		}
 		&-right{
 			padding-left: 3rem;
-			width: 920px;
 			text-align: justify;
+			width: 855px;
 		}
 
 		&-top{
