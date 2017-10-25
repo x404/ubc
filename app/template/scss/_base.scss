@@ -101,9 +101,6 @@ a{
 }
 h1{
 	@include font-size(3.6);
-	text-transform: uppercase;
-	border-left: 3px solid $color3;
-	padding-left: 2rem;
 }
 h2{font-size:2.6rem}
 h3{font-size:1.6rem}
@@ -111,9 +108,15 @@ h3{font-size:1.6rem}
 header{
 	text-align: center;
 	.title{
+		@include font-size(3.6);
+		border-left: 3px solid $color3;
 		display: inline-block;
-		position: relative;
 		margin: 6.5rem 0 4rem; 
+		padding-left: 2rem;
+		line-height: 1.5;
+		font-weight: bold;
+		position: relative;
+		text-transform: uppercase;
 		&:after{
 			@extend .before;
 			border-top: 1px solid $color5;
@@ -254,7 +257,7 @@ section{
 				height: 0;
 				border-left: 3px solid transparent;
 				border-right: 3px solid transparent;
-				border-top: 5px solid #5d645d;				
+				border-top: 5px solid $color4;				
 			}
 
 			&__dropdown{
