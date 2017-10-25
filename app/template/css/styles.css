@@ -279,7 +279,7 @@ section {
           position: relative; }
           .header__lang .jq-selectbox__dropdown ul li.sel:after {
             background-image: url(../images/sprite.png);
-            background-position: -69px -49px;
+            background-position: -27px -52px;
             width: 12px;
             height: 10px;
             right: 6px;
@@ -630,7 +630,7 @@ img.justifycenter, table.justifycenter {
       .production div.owl-nav .owl-prev:before,
       .production div.owl-nav .owl-next:before {
         background-image: url(../images/sprite.png);
-        background-position: 0px -64px;
+        background-position: -27px -31px;
         width: 31px;
         height: 21px;
         left: 9px;
@@ -641,7 +641,7 @@ img.justifycenter, table.justifycenter {
         .production div.owl-nav .owl-prev:hover:before,
         .production div.owl-nav .owl-next:hover:before {
           background-image: url(../images/sprite.png);
-          background-position: -27px -31px;
+          background-position: 0px -64px;
           width: 31px;
           height: 21px; }
     .production div.owl-nav .owl-next {
@@ -650,7 +650,7 @@ img.justifycenter, table.justifycenter {
       left: 0; }
       .production div.owl-nav .owl-prev:before {
         background-image: url(../images/sprite.png);
-        background-position: 0px -64px;
+        background-position: -27px -31px;
         width: 31px;
         height: 21px; }
   .production div.owl-dots {
@@ -944,7 +944,7 @@ img.justifycenter, table.justifycenter {
 
 button.close {
   background-image: url(../images/sprite.png);
-  background-position: -89px -34px;
+  background-position: -31px -64px;
   width: 15px;
   height: 15px;
   border: none;
@@ -955,7 +955,7 @@ button.close {
   cursor: pointer; }
   button.close:hover {
     background-image: url(../images/sprite.png);
-    background-position: -89px -49px;
+    background-position: -69px -49px;
     width: 15px;
     height: 15px; }
 

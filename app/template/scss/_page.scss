@@ -34,7 +34,7 @@
 		position: relative;
 		&:before{
 			@extend .before;
-			@include sprite($icon-arrow-left-h);
+			@include sprite($icon-arrow-left);
 			@include transition-param;
 			top: 35px;
 			opacity: .25;
