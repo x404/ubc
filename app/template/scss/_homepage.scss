@@ -431,6 +431,26 @@
 
 /* =news
 ---------------------------*/
+.news,
+.newslist{
+	&__datetime{
+		@include font-size(1.2);
+		color: $color8;
+		display: flex;
+		time{
+			padding-left: 25px;
+			position: relative;
+			&:before{
+				@extend .desaturate;
+				@extend .before;
+				@include sprite($icon-calendar);
+				left: 0;
+				top: 1px;
+			}
+		}
+	}
+}
+
 .news{
 	$r: 12px;
 	$r2: 10px;
@@ -439,6 +459,9 @@
 		.owl-nav{
 			top: 178px;
 		}
+	}
+	&__datetime{
+		justify-content: center;
 	}
 
 	header{
@@ -451,8 +474,6 @@
 		margin-top: 1.6rem;
 	}
 
-	&__item{
-	}
 	&__link{
 		@include transition;
 		display: inline-block;
@@ -547,23 +568,6 @@
 		min-height: 7rem;
 	}
 
-	&__datetime{
-		@include font-size(1.2);
-		color: $color8;
-		display: flex;
-		justify-content: center;
-		time{
-			padding-left: 25px;
-			position: relative;
-			&:before{
-				@extend .desaturate;
-				@extend .before;
-				@include sprite($icon-calendar);
-				left: 0;
-				top: 1px;
-			}
-		}
-	}
 }
 /* =/news
 ---------------------------*/

@@ -57,7 +57,6 @@ html, body{
 
 .ptsans{
 	font-family: 'PT Sans', sans-serif;
-
 }
 
 .desaturate {
@@ -106,7 +105,7 @@ h1{
 	border-left: 3px solid $color3;
 	padding-left: 2rem;
 }
-h2{font-size:2.4rem}
+h2{font-size:2.6rem}
 h3{font-size:1.6rem}
 
 header{
@@ -218,13 +217,6 @@ section{
 				}
 			}
 		}
-		// nav{
-		// 	padding-top: 3rem;
-		// }
-
-		// .login{
-		// 	padding-top: 3rem;
-		// }
 	}
 
 	&__nav{
@@ -479,4 +471,10 @@ img.justifycenter, table.justifycenter { display: block; margin-left: auto; marg
 }
 .hide{
 	display: none;
+}
+
+.img-responsive{
+	display: block;
+	max-width: 100%;
+	height: auto;
 }

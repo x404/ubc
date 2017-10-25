@@ -1,0 +1,99 @@
+$w: 936px;
+.newslist{
+	border-bottom: 1px solid $color5;
+	padding-bottom: 5rem;
+	header{
+		margin-bottom: -.7rem;		
+	}
+	&__item{
+		margin: 3rem auto;
+		max-width: $w + 65;
+		padding-bottom: 3rem;
+		position: relative;
+		width: 100%;
+		$p: 27px;
+		a{
+			display: block;
+			border-radius: 10px;
+			padding: $p;
+			border: 3px solid rgba(0,0,0,0);
+			text-decoration: none;
+			@include transition;
+			&:hover{
+				border-color: $color3;
+				.newslist{
+					&__title{
+						color: $color3;
+					}
+
+					&__pic{
+						&:before,
+						&:after{
+							opacity: 1;
+						}						
+					}
+				}
+			}
+		}
+		
+		&:after{
+			@extend .before;			
+			border-bottom: 1px solid $color5;
+			bottom: 0;
+			left: $p;
+			width: calc(100% - 54px);
+		}
+	}
+	&__title{
+		font-weight: normal;
+	}
+
+	&__datetime{
+		margin: .7rem 0;
+	}
+
+	&__pic{
+		margin: 3.1rem 0 3.6rem;
+		position: relative;
+		img{
+			vertical-align: top;
+		}
+		&:before,
+		&:after{
+			@include transition-param;
+			@extend .before;
+			opacity: 0;
+		}
+		&:before{
+			background: rgba(255, 255, 255, .63);
+			height: 100%;
+			width: 100%;
+		}
+
+		&:after{
+			@extend .btn;
+			content: 'Подробней';
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%, -50%);
+			z-index: 2;
+		}
+	}
+
+	&__intro{
+		@include font-size(1.4);
+		line-height: 1.8;
+		margin-top: 2rem;
+		text-align: justify;
+	}
+}
+
+
+.pagination{
+	max-width: $w;
+	margin: 4.6rem auto 0;
+	@include font-size(1.4);
+	a{
+		text-decoration: none;
+	}
+}
