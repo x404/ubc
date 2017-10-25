@@ -210,10 +210,31 @@ $(document).ready(function(){
 
 
 
+	// structure
 	$('.structure__box > div:not(.structure__center)').hover(
 		function(){$(this).closest('.structure__box').find('.structure__center').addClass('hover')},
 		function(){$(this).closest('.structure__box').find('.structure__center').removeClass('hover')}
-	);	
+	);
+
+	$('.structure__link').click(function(e){
+		e.preventDefault();
+		var $this = $(this),
+			target = $this.attr('href');
+
+		$('.structure__modal').fadeIn();
+		$(target).removeClass('hide').addClass('show');
+	});
+
+	$('.structure__modal .close').click(function(e){
+		e.preventDefault();
+		var $this = $(this);
+
+		$('.structure__modal').fadeOut('normal', function(){
+			$('.structure__modal').find('.show').removeClass('show').addClass('hide');
+		});
+
+	});
+
 });
 
 

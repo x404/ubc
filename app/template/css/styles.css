@@ -367,6 +367,9 @@ footer {
 
 /* =/footer
 ---------------------------*/
+.text-center {
+  text-align: center; }
+
 .justifyleft {
   text-align: left !important; }
 
@@ -402,10 +405,18 @@ img.justifycenter, table.justifycenter {
 .slider a {
   text-decoration: none; }
 
+.show {
+  display: block; }
+
+.hide {
+  display: none; }
+
 /* =structure
 ---------------------------*/
 .structure {
   padding-bottom: 0; }
+  .structure .container {
+    position: relative; }
   .structure__box {
     margin-left: auto;
     margin-right: auto;
@@ -550,6 +561,26 @@ img.justifycenter, table.justifycenter {
       background-position: -106px -150px;
       width: 106px;
       height: 73px; }
+  .structure__modal {
+    background-color: #f5faf5;
+    height: 570px;
+    left: 0;
+    padding: 5rem 2.5rem;
+    position: absolute;
+    top: -170px;
+    width: 100%;
+    z-index: 9999;
+    display: none; }
+    .structure__modal-text {
+      font-size: 14px;
+      font-size: 1.4rem;
+      margin-top: 2.6rem; }
+      .structure__modal-text p {
+        line-height: 1.75; }
+    .structure__modal button.close {
+      top: auto;
+      bottom: 3rem;
+      left: 50%; }
 
 /* =/structure
 ---------------------------*/

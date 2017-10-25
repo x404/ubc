@@ -2,6 +2,9 @@
 ---------------------------*/
 .structure{
 	padding-bottom: 0;
+	.container{
+		position: relative;
+	}
 	&__box{
 		margin-left: auto;
 		margin-right: auto;
@@ -207,7 +210,38 @@
 		}		
 	}
 
+
+	// modal
+
+	&__modal{
+		background-color: $color6;
+		height: 570px;
+		left: 0;
+		padding: 5rem 2.5rem;
+		position: absolute;
+		top: -170px;
+		width: 100%;
+		z-index: 9999;
+		display: none;
+		&-text{
+			p{
+				line-height: 1.75;				
+			}
+			@include font-size(1.4);
+			margin-top: 2.6rem;
+		}
+
+		button.close{
+			top: auto;
+			bottom: 3rem;
+			left: 50%;
+		}
+	}
 }
+
+
+
+
 /* =/structure
 ---------------------------*/
 
@@ -549,87 +583,87 @@
 ---------------------------*/
 
 
-	#map{
-		height: 600px;
-		width: 100%;
-	}
+#map{
+	height: 600px;
+	width: 100%;
+}
 
 
 
-	.modal-email{
-		@include rounded(1rem);
-		background-color: $color6;
-		border: 3px solid $color3;
-		bottom: 16.5rem;
-		display: none;
+.modal-email{
+	@include rounded(1rem);
+	background-color: $color6;
+	border: 3px solid $color3;
+	bottom: 16.5rem;
+	display: none;
+	left: 50%;
+	margin-left: -270px;
+	padding: 5.6rem 2rem 3.3rem;
+	position: absolute;
+	width: 535px;
+	z-index: 9999;
+	&:after{
+		@extend .before;
+		width: 27px;
+		height: 15px;
+		background: url(../images/form-arrow.png) no-repeat center center;
+		bottom: -15px;
 		left: 50%;
-		margin-left: -270px;
-		padding: 5.6rem 2rem 3.3rem;
-		position: absolute;
-		width: 535px;
-		z-index: 9999;
-		&:after{
-			@extend .before;
-			width: 27px;
-			height: 15px;
-			background: url(../images/form-arrow.png) no-repeat center center;
-			bottom: -15px;
-			left: 50%;
-			margin-left: -14px;
-		}
-		form{
-			padding-top: .5rem;
-		}
-
-		.modal-title{
-			@include font-size(2.4);
-			color: $color3;
-			font-weight: normal;
-			text-align: center;
-		}
-		.form-control{
-			@include font-size(1.4);
-			@include rounded(.5rem);
-			@extend .ptsans;
-			border: 3px solid $color2;
-			color: $color1;
-			height: 5rem;
-			margin-top: 2.4rem;
-			padding-left: 1.6rem;
-			padding-right: 1.6rem;
-			transition: border-color .2s;
-			width: 100%;
-			&:focus,
-			&:active{
-				border-color: $color3;
-			}
-			&.error{
-				border-color: red;
-			}
-		}
-		textarea.form-control{
-			height: 17rem;
-			padding-top: 1rem;
-			resize: none;
-		}
-
-		.btn{
-			margin-top: 3rem;
-			width: 24rem;
-		}
+		margin-left: -14px;
+	}
+	form{
+		padding-top: .5rem;
 	}
 
-	.modal-thank{
-		$w: 668px;
-		width: $w;
-		margin-left: -$w/2 ;
-	}
-
-	.thank{
+	.modal-title{
+		@include font-size(2.4);
+		color: $color3;
+		font-weight: normal;
 		text-align: center;
-		padding: 2rem 0 4rem;
-		@include font-size(2);
 	}
+	.form-control{
+		@include font-size(1.4);
+		@include rounded(.5rem);
+		@extend .ptsans;
+		border: 3px solid $color2;
+		color: $color1;
+		height: 5rem;
+		margin-top: 2.4rem;
+		padding-left: 1.6rem;
+		padding-right: 1.6rem;
+		transition: border-color .2s;
+		width: 100%;
+		&:focus,
+		&:active{
+			border-color: $color3;
+		}
+		&.error{
+			border-color: red;
+		}
+	}
+	textarea.form-control{
+		height: 17rem;
+		padding-top: 1rem;
+		resize: none;
+	}
+
+	.btn{
+		margin-top: 3rem;
+		width: 24rem;
+	}
+}
+
+.modal-thank{
+	$w: 668px;
+	width: $w;
+	margin-left: -$w/2 ;
+}
+
+.thank{
+	text-align: center;
+	padding: 2rem 0 4rem;
+	@include font-size(2);
+}
 
 button.close{
 	@include sprite($icon-close-modal);
@@ -642,10 +676,6 @@ button.close{
 	&:hover{
 		@include sprite($icon-close-modal-hover);
 	}
-}
-
-
-.submit-btn{
 }
 
 .backdrop{

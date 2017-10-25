@@ -417,7 +417,9 @@ footer{
 /* =/footer
 ---------------------------*/
 
-
+.text-center{
+	text-align: center;
+}
 .justifyleft {text-align:left !important; }
 .justifyright {text-align:right !important; }
 .justifycenter {text-align: center !important; }
@@ -439,4 +441,11 @@ img.justifycenter, table.justifycenter { display: block; margin-left: auto; marg
 	a{
 		text-decoration: none;
 	}
+}
+
+.show{
+	display: block;
+}
+.hide{
+	display: none;
 }
