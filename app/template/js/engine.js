@@ -8,7 +8,7 @@ $(document).ready(function(){
 			target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
 			if (target.length) {
 				$('html,body').animate({
-					scrollTop: target.offset().top-98
+					scrollTop: target.offset().top-80
 				}, 1000);
 				return false;
 			}
@@ -140,7 +140,6 @@ $(document).ready(function(){
 				h = $(document).height();
 				$('body').addClass('o-menu');
 				$('#navbar').height(h);
-
 			},
 			closeMenu = function(e){
 				e.preventDefault();
@@ -167,6 +166,18 @@ $(document).ready(function(){
 				$('.modal-email').find('.modal-title, form').show();
 				$('body').append('<div class="backdrop"></div>');
 				addKeyPressHandler($this);
+
+
+				var elem = $(".modal-email"),
+					top = 0,
+					height_block = $(elem).height();
+
+					top = $('#clients').offset().top - height_block/2;
+				$('html,body').animate({
+					scrollTop: top
+				}, 1000);
+
+
 			},
 			closeMenu = function(e){
 				e.preventDefault();
