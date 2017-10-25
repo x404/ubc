@@ -653,8 +653,7 @@ img.justifycenter, table.justifycenter {
         vertical-align: top;
         position: absolute;
         right: 0;
-        -webkit-transition: transform 0.3s ease-out;
-        transition: transform 0.3s ease-out; }
+        transition: transform 0.3s cubic-bezier(0.08, 0.37, 0.14, 0.53); }
       .production__item-left:hover img {
         transform: translateX(963px); }
     .production__item-right {

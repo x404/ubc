@@ -306,7 +306,8 @@
 				vertical-align: top;
 				position: absolute;
 				right: 0;
-				@include transition-param(transform, .3s);
+				// @include transition-param(transform, .3s);
+				transition: transform .3s cubic-bezier(.08,.37,.14,.53)
 			}
 			&:hover{
 				img{
