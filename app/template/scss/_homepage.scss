@@ -284,7 +284,7 @@
 			.owl-next{
 				right: 0;
 			}
-			
+
 			.owl-prev{
 				left: 0;
 				&:before{
@@ -309,7 +309,7 @@
 				vertical-align: top;
 				position: absolute;
 				right: 0;
-				transition: transform .3s cubic-bezier(.08,.37,.14,.53);
+				transition:transform .6s cubic-bezier(0.19, 1, 0.22, 1);
 				will-change: transform;
 			}
 			&:hover{
