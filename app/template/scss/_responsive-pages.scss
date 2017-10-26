@@ -100,6 +100,10 @@
 			}
 		}
 	}
+
+	#map{
+		height: 400px;
+	}
 }
 
 @media (max-width: 991px){
@@ -223,6 +227,13 @@
 }
 
 
+@media (max-width: 736px){
+	#map{
+		height: 250px;
+	}
+}
+
+
 @media (max-width: 665px){
 	.production__item{
 		&-top{
@@ -256,6 +267,10 @@
 			}
 		}
 	}
+
+	#map{
+		height: 300px;
+	}
 }
 
 
@@ -274,6 +289,13 @@
 		left: 2%;
 		width: 96%;
 		margin-left: 0;
+	}
+}
+
+
+@media (max-width: 568px){
+	#map{
+		height: 220px;
 	}
 }
 
