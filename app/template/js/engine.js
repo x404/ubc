@@ -235,10 +235,13 @@ $(document).ready(function(){
 					height_block = $(elem).height();
 
 					top = $('#clients').offset().top - height_block/2;
-				$('html,body').animate({
-					scrollTop: top
-				}, 1000);
 
+
+				if ($(window).width() > 991){
+					$('html,body').animate({
+						scrollTop: top
+					}, 1000);
+				};
 
 			},
 			closeMenu = function(e){
