@@ -187,6 +187,9 @@ $(document).ready(function(){
 	});
 
 
+	// $('.collapse').collapse()
+
+
 	// mobile-menu
 	$('#navbar').each(function(){
 		var $this = $(this),

@@ -172,10 +172,11 @@
 	}
 
 	.structure{
-		&__box{
-			width: 790px;
-		}
 		display: none !important;
+	}
+
+	.accordion{
+		display: block;
 	}
 }
 
