@@ -107,17 +107,25 @@ $(document).ready(function(){
 		responsive:{
 			0:{
 				items:1,
-				stagePadding: 20
+				stagePadding: 70
 			},
-			900:{
+			400:{
 				items:2,
+				stagePadding: 30
+			},
+			500:{
+				items:3,
+				stagePadding: 0
+			},
+			700:{
+				items:3,
 				stagePadding: 0
 			},
 			992:{
-				items:1
+				items:5
 			},
 			1250:{
-				items:2
+				items:6
 			},
 			1550:{
 				items:7
@@ -136,17 +144,33 @@ $(document).ready(function(){
 		responsive:{
 			0:{
 				items:1,
-				stagePadding: 20
+				stagePadding: 10
+			},
+			360:{
+				items:1,
+				stagePadding: 30
+			},
+			430:{
+				items:1,
+				stagePadding: 60
+			},
+			500:{
+				items:1,
+				stagePadding: 70
+			},
+			600:{
+				items:1,
+				stagePadding: 100
 			},
 			900:{
 				items:2,
 				stagePadding: 0
 			},
 			992:{
-				items:1
+				items:3
 			},
 			1250:{
-				items:2
+				items:4
 			},
 			1550:{
 				items:5

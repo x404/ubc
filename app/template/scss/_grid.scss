@@ -10,12 +10,15 @@
 	}
 }
 
-@media (min-width: 768px) {
-	.container{
-		width: 730px;
-	}
 
+@media (min-width: 767px) {
+	.container{
+		padding-left: 15px;
+		padding-right: 15px;
+	}
 }
+
+
 @media (min-width: 992px) {
 	.container {
 		width: 940px;
