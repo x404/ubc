@@ -1298,7 +1298,7 @@ tbody.collapse.show {
     background-color: #4db146;
     border: none;
     height: 70px;
-    position: fixed;
+    position: absolute;
     text-align: center;
     top: 0;
     width: 70px;
@@ -1309,7 +1309,7 @@ tbody.collapse.show {
     display: block;
     left: 0;
     margin-top: 0;
-    position: fixed;
+    position: absolute;
     top: 0;
     transform: translate(-305px, 0);
     transition: all .2s ease-out;
@@ -1372,8 +1372,12 @@ tbody.collapse.show {
     margin-left: 3rem; } }
 
 @media (max-width: 767px) {
-  .header__logo {
-    margin-left: calc(50% - 73px); } }
+  body {
+    padding-top: 0; }
+  .header {
+    position: static; }
+    .header__logo {
+      margin-left: calc(50% - 73px); } }
 
 @media (max-width: 550px) {
   footer {

@@ -35,7 +35,11 @@
 }
 
 @media (max-width: 767px){
+	body{
+		padding-top: 0;
+	}
 	.header{
+		position: static;
 		&__logo{
 			margin-left: calc(50% - 73px);
 		}
