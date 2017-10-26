@@ -240,7 +240,7 @@ $(document).ready(function(){
 					top = $('#clients').offset().top - height_block/2;
 
 
-				if ($(window).width() > 991){
+				if ($(window).width() > 1024){
 					$('html,body').animate({
 						scrollTop: top
 					}, 1000);

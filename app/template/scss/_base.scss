@@ -337,30 +337,36 @@ section{
 	}
 
 	a {
-	    position: relative;
-	    display: block;
-	    transition: color 0.1s,background-color 0.1s,padding 0.2s ease-in;
+		position: relative;
+		display: block;
+		transition: color 0.1s,background-color 0.1s,padding 0.2s ease-in;
+		&:before, .active {
+			content: '';
+			display: block;
+			position: absolute;
+			bottom: 3px;
+			left: 0;
+			height: 3px;
+			width: 100%;
+			background-color: $color3;
+			transform-origin: right top;
+			transform: scale(0, 1);
+			transition: color 0.1s,transform 0.2s ease-out;
+		}
+		&.active{
+		 	color: $color3;			
+		}
+		&:active::before {
+			background-color: $color3;
+		}
+		&:hover::before, 
+		&:focus::before,
+		&.active:before
+		 {
+			transform-origin: left top;
+			transform: scale(1, 1);
+		}	
 	}
-	a::before {
-	    content: '';
-	    display: block;
-	    position: absolute;
-	    bottom: 3px;
-	    left: 0;
-	    height: 3px;
-	    width: 100%;
-	    background-color: $color3;
-	    transform-origin: right top;
-	    transform: scale(0, 1);
-	    transition: color 0.1s,transform 0.2s ease-out;
-	}
-	a:active::before {
-	    background-color: $color3;
-	}
-	a:hover::before, a:focus::before {
-	    transform-origin: left top;
-	    transform: scale(1, 1);
-	}	
 }
 /* =/header
 ---------------------------*/

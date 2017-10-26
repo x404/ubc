@@ -315,23 +315,25 @@ section {
     position: relative;
     display: block;
     transition: color 0.1s,background-color 0.1s,padding 0.2s ease-in; }
-  .mainnav a::before {
-    content: '';
-    display: block;
-    position: absolute;
-    bottom: 3px;
-    left: 0;
-    height: 3px;
-    width: 100%;
-    background-color: #4db146;
-    transform-origin: right top;
-    transform: scale(0, 1);
-    transition: color 0.1s,transform 0.2s ease-out; }
-  .mainnav a:active::before {
-    background-color: #4db146; }
-  .mainnav a:hover::before, .mainnav a:focus::before {
-    transform-origin: left top;
-    transform: scale(1, 1); }
+    .mainnav a:before, .mainnav a .active {
+      content: '';
+      display: block;
+      position: absolute;
+      bottom: 3px;
+      left: 0;
+      height: 3px;
+      width: 100%;
+      background-color: #4db146;
+      transform-origin: right top;
+      transform: scale(0, 1);
+      transition: color 0.1s,transform 0.2s ease-out; }
+    .mainnav a.active {
+      color: #4db146; }
+    .mainnav a:active::before {
+      background-color: #4db146; }
+    .mainnav a:hover::before, .mainnav a:focus::before, .mainnav a.active:before {
+      transform-origin: left top;
+      transform: scale(1, 1); }
 
 /* =/header
 ---------------------------*/
@@ -1444,7 +1446,7 @@ tbody.collapse.show {
     margin-left: -400px;
     width: 800px; } }
 
-@media (max-width: 1000px) {
+@media (max-width: 1024px) {
   .clients__carousel:before, .clients__carousel:after,
   .news__carousel:before,
   .news__carousel:after {
