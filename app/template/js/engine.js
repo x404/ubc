@@ -19,6 +19,14 @@ $(document).ready(function(){
 	var panel = $('.header'),
 		pos = panel.offset();
 
+
+	$(window).resize(function(){
+		if ($(window).width() > 767 ){
+			$('#navbar').removeAttr('style');
+			$('.o-menu').removeClass();
+		}
+	});
+
 	$(window).scroll(function(){
 		$this = $(this);
 

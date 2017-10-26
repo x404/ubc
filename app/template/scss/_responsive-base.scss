@@ -77,3 +77,16 @@
 		}
 	}
 }
+
+
+@media (max-width: 320px){
+	.header{
+		&__logo img{
+			width: 140px;
+			margin-left: 4rem;
+		}
+		&__lang{
+			margin-left: 2rem;
+		}
+	}
+}
