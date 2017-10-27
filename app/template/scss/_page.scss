@@ -28,7 +28,15 @@
 .navnews{
 	border-top: 1px solid $color5;
 	margin-top: 3rem;
+	overflow: hidden;
 	padding-top: 4rem;
+	&__prev{
+		float: left;
+	}
+	&__next{
+		float: right;
+	}
+
 	&__prev,
 	&__next{
 		position: relative;
