@@ -1062,7 +1062,9 @@ label.error {
     margin: .7rem 0; }
   .newslist__pic {
     margin: 3.1rem 0 3.6rem;
-    position: relative; }
+    position: relative;
+    height: 102px;
+    width: 102px; }
     .newslist__pic img {
       vertical-align: top; }
     .newslist__pic:before, .newslist__pic:after {
