@@ -1366,6 +1366,12 @@ tbody.collapse.show {
 ::-ms-clear {
   display: none; }
 
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  body {
+    display: block; }
+  textarea {
+    overflow: hidden; } }
+
 @media (max-width: 1199px) {
   .mainnav ul {
     margin-left: 5rem;
