@@ -333,6 +333,15 @@ section{
 					color: $color;
 				}
 			}
+
+			&.active{
+				a{
+					color: $color3;
+					&:before{
+						background-color: $color3;
+					}
+				}
+			}
 		}
 	}
 
@@ -340,7 +349,8 @@ section{
 		position: relative;
 		display: block;
 		transition: color 0.1s,background-color 0.1s,padding 0.2s ease-in;
-		&:before, .active {
+		&:before, 
+		.active {
 			content: '';
 			display: block;
 			position: absolute;
