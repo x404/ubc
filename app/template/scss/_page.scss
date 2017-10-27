@@ -97,6 +97,8 @@
 	}
 
 	&__pic{
+		height: 102px;
+		width: 102px;
 		img{
 			@include transition-param(border-color);
 			border-radius: 50%;
