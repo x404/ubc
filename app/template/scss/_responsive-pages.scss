@@ -64,6 +64,11 @@
 			width: 1000px;
 		}
 	}
+
+	// pagination
+	.pagination{
+		padding: 0 3rem;
+	}
 }
 
 
@@ -297,6 +302,16 @@
 	#map{
 		height: 220px;
 	}
+
+	.newslist{
+		&__title{
+			@include font-size(2.2);
+		}
+		&__item a{
+			padding: 0;
+			border: none !important;
+		}
+	}
 }
 
 
@@ -312,6 +327,28 @@
 		width: 280px;
 	}
 }
+
+
+@media (max-width: 450px){
+
+	.newslist{
+		padding-bottom: 2rem;
+		&__title{
+			font-size: 1.9rem;
+		}
+	}
+
+	.pagination{
+		margin-top: -1rem;
+		text-align: center;
+		a{
+			display: block;
+			float: none !important;
+			margin: 1rem 0;
+		}
+	}
+}
+
 
 
 @media (max-width: 386px){
@@ -334,5 +371,25 @@
 	.clients .text{
 		padding-left: 0;
 		padding-right: 0;
+	}
+
+
+	// news
+	.newslist{
+		header{
+			.title{
+				margin-top: 2rem;
+				margin-bottom: 2rem;
+			}
+		}
+		&__intro{
+			margin-top: 0;
+		}
+		&__pic{
+			margin: 1rem 0;
+		}
+		&__title{
+			@include font-size(1.6)
+		}
 	}
 }

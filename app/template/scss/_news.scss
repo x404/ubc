@@ -93,7 +93,17 @@ $w: 936px;
 	max-width: $w;
 	margin: 4.6rem auto 0;
 	@include font-size(1.4);
+	overflow: hidden;
 	a{
 		text-decoration: none;
+		&.prev{
+			float: left;
+		}
+		&.next{
+			float: right;
+		}
+		&:hover{
+			color: $color3;
+		}
 	}
 }
