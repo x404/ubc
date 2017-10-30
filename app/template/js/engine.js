@@ -59,7 +59,7 @@ $(document).ready(function(){
 	}, 100);
 
 
-	// карусель
+	// carousel
 	$('#foo1').owlCarousel({
 		loop:false,
 		nav:true,
@@ -106,6 +106,7 @@ $(document).ready(function(){
 	});
 
 
+	// clients
 	$('#foo3').owlCarousel({
 		loop:false,
 		nav:false,
@@ -187,9 +188,6 @@ $(document).ready(function(){
 	});
 
 
-	// $('.collapse').collapse()
-
-
 	// mobile-menu
 	$('#navbar').each(function(){
 		var $this = $(this),
@@ -202,9 +200,7 @@ $(document).ready(function(){
 			},
 			openMenu = function(e){
 				e.preventDefault();
-				// h = $(document).height();
 				$('body').addClass('o-menu');
-				// $('#navbar').height(h);
 			},
 			closeMenu = function(e){
 				e.preventDefault();
@@ -300,9 +296,7 @@ $(document).ready(function(){
 		$('.structure__modal').fadeOut('normal', function(){
 			$('.structure__modal').find('.show').removeClass('show').addClass('hide');
 		});
-
 	});
-
 });
 
 
