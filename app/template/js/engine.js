@@ -202,9 +202,9 @@ $(document).ready(function(){
 			},
 			openMenu = function(e){
 				e.preventDefault();
-				h = $(document).height();
+				// h = $(document).height();
 				$('body').addClass('o-menu');
-				$('#navbar').height(h);
+				// $('#navbar').height(h);
 			},
 			closeMenu = function(e){
 				e.preventDefault();
