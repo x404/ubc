@@ -1266,7 +1266,7 @@ tbody.collapse.show {
     display: block;
     height: 70px;
     left: 0;
-    position: absolute;
+    position: fixed;
     text-align: center;
     top: 0;
     width: 70px;
@@ -1306,6 +1306,13 @@ tbody.collapse.show {
         text-decoration: none; }
         .o-menu #navbar .show-sm a:hover {
           text-decoration: underline; }
+  .o-menu .mainnav__list {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    overflow: auto; }
   .close-menu {
     -webkit-transition: all 0.2s ease-out;
     transition: all 0.2s ease-out;
@@ -1318,7 +1325,7 @@ tbody.collapse.show {
     background-color: #4db146;
     border: none;
     height: 70px;
-    position: absolute;
+    position: fixed;
     text-align: center;
     top: 0;
     width: 70px;
@@ -1329,8 +1336,10 @@ tbody.collapse.show {
     display: block;
     left: 0;
     margin-top: 0;
-    position: absolute;
+    position: fixed;
     top: 0;
+    bottom: 0;
+    right: 0;
     transform: translate(-305px, 0);
     transition: all .2s ease-out;
     width: 230px;
