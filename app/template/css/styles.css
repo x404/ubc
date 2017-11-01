@@ -703,6 +703,7 @@ img.justifycenter, table.justifycenter {
     width: 100%;
     text-align: center; }
   .production__item {
+    height: 458px;
     display: flex;
     overflow: hidden; }
     .production__item-left {
