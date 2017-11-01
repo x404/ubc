@@ -339,6 +339,8 @@ section{
 					color: $color3;
 					&:before{
 						background-color: $color3;
+						transform-origin: left top;
+						transform: scale(1, 1);
 					}
 				}
 			}

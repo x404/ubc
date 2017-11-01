@@ -314,7 +314,9 @@ section {
       .mainnav ul li.active a {
         color: #4db146; }
         .mainnav ul li.active a:before {
-          background-color: #4db146; }
+          background-color: #4db146;
+          transform-origin: left top;
+          transform: scale(1, 1); }
   .mainnav a {
     position: relative;
     display: block;
