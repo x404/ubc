@@ -10,6 +10,10 @@ $(document).ready(function(){
 				$('html,body').animate({
 					scrollTop: target.offset().top-80
 				}, 1000);
+
+				if( $(window).width() < 768){
+					$('.close-menu').trigger('click');
+				}				
 				return false;
 			}
 		}
