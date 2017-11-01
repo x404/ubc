@@ -12,11 +12,115 @@
 	}
 
 	main{
-		@include font-size(1.4);
+		@include font-size(1.5);
 		padding-bottom: 5rem;
 		h1, .page__title{
 			@include font-size(3);
+		}
+
+		h1, h2, h3, h4, h5, h6{
 			font-weight: normal;
+			margin: 1.2rem 0;		
+		}
+
+		h2{
+			@include font-size(3)
+		}
+		h3{
+			@include font-size(2.4)
+		}
+		h4{
+			@include font-size(1.8)
+		}
+		h5{
+			@include font-size(1.6)
+		}
+		h6{
+			@include font-size(1.4)
+		}
+
+		p{
+			margin: 1.5rem 0;
+		}
+
+		blockquote{
+			background-color: $color5;
+			border-radius: 5px;
+			line-height: 1.7;
+			margin-left: 0;
+			margin-right: 0;
+			padding: 2rem 3.5rem;
+			text-align: justify;
+		}
+
+
+		a{
+			color: $color3;
+			@extend .tdn;
+			&:hover img{
+				border-color: $color3;
+			}
+		}
+
+		ul, ol{
+			li{
+				margin: 1rem 0 1rem 1rem;
+			}
+		}
+		ul{
+			list-style: inside;
+		}
+
+		ol{
+			list-style-position: inside;
+		}
+
+		img{
+			@include transition-param(border-color);
+			border-radius: 10px;
+			border: 3px solid #d6e6d4;
+			max-width: 100%;
+			height: auto;
+		}
+
+		table{
+			color: #5d645d;
+			margin: 1rem 0;
+			width: 100%;
+			th{
+				background-color: #d6e6d4;
+				font-weight: normal;
+			}
+
+
+			th, td{
+				padding-top: 2.5rem;
+				padding-bottom: 2.5rem;
+			}
+
+			td{
+				border: 1px solid rgba(0,0,0,0);
+				@include transition-param(border-color);
+			}
+
+			tr:nth-child(odd){
+				td{
+					background-color: #fbfdfb;
+				}
+			}
+
+			tr:hover{
+				td{
+					border-top-color: #4db146;
+					border-bottom-color: #4db146;
+					&:first-child{
+						border-left-color: #4db146;						
+					}
+					&:last-child{
+						border-right-color: #4db146;
+					}
+				}
+			}
 		}
 	}
 }

@@ -177,9 +177,9 @@ input::-moz-focus-inner {
   border: 0;
   padding: 0; }
 
-.tdn {
+.tdn, .page main a {
   text-decoration: none; }
-  .tdn:hover {
+  .tdn:hover, .page main a:hover {
     text-decoration: underline; }
 
 .tdu, .footer__right a {
@@ -1117,13 +1117,80 @@ label.error {
   .page .datetime {
     margin: 1rem 0 3.5rem; }
   .page main {
-    font-size: 14px;
-    font-size: 1.4rem;
+    font-size: 15px;
+    font-size: 1.5rem;
     padding-bottom: 5rem; }
     .page main h1, .page main .page__title {
       font-size: 30px;
-      font-size: 3rem;
-      font-weight: normal; }
+      font-size: 3rem; }
+    .page main h1, .page main h2, .page main h3, .page main h4, .page main h5, .page main h6 {
+      font-weight: normal;
+      margin: 1.2rem 0; }
+    .page main h2 {
+      font-size: 30px;
+      font-size: 3rem; }
+    .page main h3 {
+      font-size: 24px;
+      font-size: 2.4rem; }
+    .page main h4 {
+      font-size: 18px;
+      font-size: 1.8rem; }
+    .page main h5 {
+      font-size: 16px;
+      font-size: 1.6rem; }
+    .page main h6 {
+      font-size: 14px;
+      font-size: 1.4rem; }
+    .page main p {
+      margin: 1.5rem 0; }
+    .page main blockquote {
+      background-color: #d6e6d4;
+      border-radius: 5px;
+      line-height: 1.7;
+      margin-left: 0;
+      margin-right: 0;
+      padding: 2rem 3.5rem;
+      text-align: justify; }
+    .page main a {
+      color: #4db146; }
+      .page main a:hover img {
+        border-color: #4db146; }
+    .page main ul li, .page main ol li {
+      margin: 1rem 0 1rem 1rem; }
+    .page main ul {
+      list-style: inside; }
+    .page main ol {
+      list-style-position: inside; }
+    .page main img {
+      -webkit-transition: border-color 0.2s ease-out;
+      transition: border-color 0.2s ease-out;
+      border-radius: 10px;
+      border: 3px solid #d6e6d4;
+      max-width: 100%;
+      height: auto; }
+    .page main table {
+      color: #5d645d;
+      margin: 1rem 0;
+      width: 100%; }
+      .page main table th {
+        background-color: #d6e6d4;
+        font-weight: normal; }
+      .page main table th, .page main table td {
+        padding-top: 2.5rem;
+        padding-bottom: 2.5rem; }
+      .page main table td {
+        border: 1px solid transparent;
+        -webkit-transition: border-color 0.2s ease-out;
+        transition: border-color 0.2s ease-out; }
+      .page main table tr:nth-child(odd) td {
+        background-color: #fbfdfb; }
+      .page main table tr:hover td {
+        border-top-color: #4db146;
+        border-bottom-color: #4db146; }
+        .page main table tr:hover td:first-child {
+          border-left-color: #4db146; }
+        .page main table tr:hover td:last-child {
+          border-right-color: #4db146; }
 
 /* =navnews
 ---------------------------*/
@@ -1400,6 +1467,11 @@ tbody.collapse.show {
       margin-left: 0; } }
 
 @media (max-width: 991px) {
+  .table-responsive {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    -ms-overflow-style: -ms-autohiding-scrollbar; }
   .header__logo img {
     width: 170px; }
   .header__lang {
